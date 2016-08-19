@@ -6,13 +6,13 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/16 10:32:16 by jobailla          #+#    #+#             */
-/*   Updated: 2016/08/16 12:19:33 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/08/19 15:39:10 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int		ft_strlen(char *str);
 
-char	*ft_strchat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
 	int		i;
 	int		len;
