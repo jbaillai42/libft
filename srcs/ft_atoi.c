@@ -10,6 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
+#include <stdlib.H>
+
 int		ft_atoi(char *str)
 {
 	int i;
@@ -18,11 +21,12 @@ int		ft_atoi(char *str)
 
 	i = 0;
 	ret = 0;
+	neg = 0;
 	while (str[i] == '\n' || str[i] == '\0' || str[i] == ' ')
 		i++;
-	if (str[i] == '-')
+	if (str[0] == '-')
 		neg = 1;
-	if (str[i] == '-' || str[i] == '+')
+	if (str[0] == '-' || str[i] == '+')
 		i++;
 	while (str[i] >= '0' && str[i] <= '9')
 	{

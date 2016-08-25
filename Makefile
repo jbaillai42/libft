@@ -37,8 +37,6 @@ $(NAME):
 	@echo "$(BLUE)Creation de la libairie..."
 	@ar rc $(NAME) *.o
 	@echo "$(GREEN)Librairie créee."
-
-index: $(NAME)
 	@ranlib $(NAME)
 	@echo "$(MAGENTA)Créeation de l'index pour libft.a"
 
