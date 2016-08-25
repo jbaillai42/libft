@@ -6,7 +6,7 @@
 #    By: jobailla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#    Updated: 2016/08/25 16:28:37 by jobailla         ###   ########.fr        #
+#    Updated: 2016/08/25 17:12:42 by jobailla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ RED = \033[1;31m
 BLUE = \033[1;34m
 GREEN = \033[0;32m
 YELLOW = \033[1;33m
+MAGENTA = \033[95m
 
 all: $(NAME)
 
@@ -30,23 +31,23 @@ $(NAME):
 	@echo "$(YELLOW)| |    | | '_ \|  _| __| | '_ \ "
 	@echo "$(YELLOW)| |____| | |_) | | | |_ _| | | |"
 	@echo "$(YELLOW)|______|_|_.__/|_|  \__(_)_| |_|"
-	@echo "$(BLUE)Compilation de la libft....\n"
+	@echo "$(BLUE)Compilation de la libft...."
 	@$(COMPIL) $(FLAGS) -c $(SRC)*.c
 	@echo "$(GREEN)Compilation OK !\n"
-	@echo "$(BLUE)Creation de la libairie...\n"
+	@echo "$(BLUE)Creation de la libairie..."
 	@ar rc $(NAME) *.o
-	@echo "$(GREEN)Librairie créee.\n"
+	@echo "$(GREEN)Librairie créee."
 
-index:
-	@echo "$(GREEN)Créeation de l'index pour libft.a\n"
+index: $(NAME)
 	@ranlib $(NAME)
+	@echo "$(MAGENTA)Créeation de l'index pour libft.a"
 
 clean:
-	@echo "$(RED)Suppression des fichiers objets...OK\n"
 	@rm -f *.o
+	@echo "$(RED)Suppression des fichiers objets"
 
 fclean:clean
-	@echo "$(RED)Suppression de la libft\n"
 	@rm -f $(NAME)
+	@echo "$(RED)Suppression de la libft_creator"
 
 re: fclean all
