@@ -6,12 +6,9 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/09 09:57:20 by jobailla          #+#    #+#             */
-/*   Updated: 2016/08/10 18:25:42 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/09/16 00:11:22 by                  ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <stdio.h>
-#include <stdlib.H>
 
 int		ft_atoi(char *str)
 {
@@ -34,8 +31,5 @@ int		ft_atoi(char *str)
 		ret = ret + str[i] - '0';
 		i++;
 	}
-	if (neg == 1)
-		return (-ret);
-	else
-		return (ret);
+		return ((neg == 1) ? ret * (-1) : ret);
 }
