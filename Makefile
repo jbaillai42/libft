@@ -6,7 +6,7 @@
 #    By: jobailla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/09/17 01:05:58 by                  ###   ########.fr       *#
+#*   Updated: 2016/09/19 16:31:51 by                  ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,22 +40,22 @@ $(NAME):
 
 help:
 	@echo "$(YELLOW)\t\t====== AIDE ======\n"
-	@echo "$(WHITE)Compiler la libft :\n$(GREEN)make all"
-	@echo "$(WHITE)Effacer les fichier .o :\n$(GREEN)make clean"
-	@echo "$(WHITE)Effacer tous fichiers crees par le makefile :\
-	\n$(GREEN)make fclean"
-	@echo "$(WHITE)Effacer et recompiler :\n$(GREEN)make re"
-	@echo "$(WHITE)Verifier la norme :\n$(GREEN)make norme"
+	@echo "$(GREEN)make all\t$(WHITE)Compiler la libft\n"
+	@echo "$(GREEN)make clean\t$(WHITE)Effacer les fichier .o\n"
+	@echo "$(GREEN)make fclean\t$(WHITE)Effacer tous fichiers crees par le\
+	makefile\n"
+	@echo "$(GREEN)make re\t\t$(WHITE)Effacer et recompiler\n"
+	@echo "$(GREEN)make norme\t$(WHITE)Verifier la norme\n"
 
 norme:
 	@norminette $(SRC)
 
 clean:
 	@rm -f *.o
-	@echo "$(RED)Suppression des fichiers objets"
+	@echo "$(RED)Suppression des fichiers objets\t\t\t\t$(GREEN)OK"
 
 fclean:clean
 	@rm -f $(NAME)
-	@echo "$(RED)Suppression des des fichier cree par le Makefile"
+	@echo "$(RED)Suppression des des fichier cree par le Makefile\t$(GREEN)OK"
 
 re: fclean all
