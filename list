@@ -44,10 +44,10 @@ ft_strtrim
 ft_strsplit		
 ft_itoa			
 ft_putchar		OK
-ft_putstr		
+ft_putstr		OK
 ft_putendl		
 ft_putnbr		OK
 ft_putchar_fd	
-ft_putstr_fd	OK
+ft_putstr_fd	
 ft_putendl_fd	
 ft_putnbr_fd	
