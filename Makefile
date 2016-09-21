@@ -6,43 +6,52 @@
 #    By: jobailla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/09/20 03:18:11 by jobailla         ###   ########.fr       *#
+#*   Updated: 2016/09/21 02:16:42 by                  ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-SRC_PATH = srcs
 INC_PATH = includes
+SRC_PATH = srcs
 O_PATH = objets
-C_FILE = *.c
-O_FILE = $(C_FILE:.c=.o)
-COMPIL = gcc
-FLAGS = -Wall -Wextra -Werror
+SRC = $(addprefix $(SRC_PATH)/,$(C_FILE))
+C_FILE = ft_putchar.c ft_putstr.c ft_strlen.c ft_strdup.c ft_strcpy.c \
+		ft_strncpy.c ft_strcat.c ft_strstr.c ft_strcmp.c ft_strncmp.c \
+		ft_atoi.c ft_putnbr.c
+O_FILE = $(SRC:.c=.o)
+COMPIL = clang -Wall -Wextra -Werror
 RED = \033[0;31m
 BLUE = \033[1;34m
+CYAN = \033[0;36m
 GREEN = \033[0;32m
 YELLOW = \033[0;33m
-MAGENTA = \033[95m
 WHITE = \033[0;97m
+MAGENTA = \033[0;35m
 
 all: $(NAME)
 
-$(NAME):
+$(NAME): $(O_FILE)
 	@echo "$(YELLOW) _      _ _      __ _     _     "
 	@echo "$(YELLOW)| |    (_) |    / _| |   | |    "
 	@echo "$(YELLOW)| |     _| |__ | |_| |_  | |__  "
 	@echo "$(YELLOW)| |    | | '_ \|  _| __| | '_ \ "
 	@echo "$(YELLOW)| |____| | |_) | | | |_ _| | | |"
-	@echo "$(YELLOW)|______|_|_.__/|_|  \__(_)_| |_|\n"
-	@$(COMPIL) $(FLAGS) -c $(SRC_PATH)/$(C_FILE)
-	@ar rc $(NAME) $(O_FILE)
-	@ranlib $(NAME)
-	@mkdir $(O_PATH)/ && mv $(O_FILE) $(O_PATH)/
+	@echo "$(YELLOW)|______|_|_.__/|_|  \__(_)_| |_|"
+	@echo "$(YELLOW)\t\t\t\tBy Jobailla\n"
 	@echo	"$(RED)NOTE: $(WHITE)Pour afficher la liste des commandes : \
-	$(GREEN)make help"
+	$(GREEN)make help\n"
+	@echo "$(GREEN)[OK]\t$(BLUE)Compilation des fichiers objets"
+	@ar rc $(NAME) $(O_FILE)
+	@echo "$(GREEN)[OK]\t$(BLUE)Creation de la librairie"
+	@ranlib $(NAME)
+	@echo "$(GREEN)[OK]\t$(BLUE)Creation de l'index pour $(NAME)\n"
+
+%.o: %.c
+	@$(COMPIL) -c $< -I $(INC_PATH) -o $@
+	@echo "$(GREEN)[OK]\t$(WHITE)Compilation du fichier : $@"
 
 help:
-	@echo "$(YELLOW)\t\t====== AIDE ======\n"
+	@echo "$(YELLOW)\n\t\t====== AIDE ======\n"
 	@echo "$(GREEN)make all\t$(WHITE)Compiler la libft\n"
 	@echo "$(GREEN)make clean\t$(WHITE)Effacer les fichier .o\n"
 	@echo "$(GREEN)make fclean\t$(WHITE)Effacer tous fichiers crees par le \
@@ -54,11 +63,12 @@ norme:
 	@norminette $(SRC_PATH)/$(C_FILE)
 
 clean:
-	@rm -rf $(O_PATH)
-	@echo "$(RED)Suppression du repertoire $(O_PATH)\t\t\t$(GREEN)OK"
+	@rm $(O_FILE)
+	@echo "$(GREEN)[OK]\t$(RED) Suppression des fichiers objets"
 
 fclean:clean
 	@rm -f $(NAME)
-	@echo "$(RED)Suppression des des fichier cree par le Makefile\t$(GREEN)OK"
+	@echo "$(GREEN)[OK]\t$(RED)Suppression des des fichier cree par le \
+	Makefile\n"
 
 re: fclean all
