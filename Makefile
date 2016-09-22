@@ -6,7 +6,7 @@
 #    By: jobailla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/09/22 23:34:57 by jobailla         ###   ########.fr       *#
+#*   Updated: 2016/09/22 23:37:15 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,7 +85,7 @@ clean:
 	@echo "$(GREEN)[OK]\t$(RED) Suppression des fichiers objets"
 
 fclean:clean
-	@#rm -f $(NAME) # DESACTIVER EN MODE CORRECTION
+	@rm -f $(NAME) # DESACTIVER EN MODE CORRECTION
 	@rm -f $(SRC_PATH)/$(C_FILE:.c=)
 	@echo "$(GREEN)[OK]\t$(RED)Suppression des des fichier cree par le \
 	Makefile\n"
