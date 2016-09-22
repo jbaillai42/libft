@@ -6,7 +6,7 @@
 #    By: jobailla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/09/21 02:16:42 by                  ###   ########.fr       *#
+#*   Updated: 2016/09/22 23:02:19 by                  ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@ NAME = libft.a
 INC_PATH = includes
 SRC_PATH = srcs
 O_PATH = objets
+MAIN_PATH = main_
 SRC = $(addprefix $(SRC_PATH)/,$(C_FILE))
 C_FILE = ft_putchar.c ft_putstr.c ft_strlen.c ft_strdup.c ft_strcpy.c \
 		ft_strncpy.c ft_strcat.c ft_strstr.c ft_strcmp.c ft_strncmp.c \
@@ -31,13 +32,13 @@ MAGENTA = \033[0;35m
 all: $(NAME)
 
 $(NAME): $(O_FILE)
-	@echo "$(YELLOW) _      _ _      __ _     _     "
-	@echo "$(YELLOW)| |    (_) |    / _| |   | |    "
-	@echo "$(YELLOW)| |     _| |__ | |_| |_  | |__  "
-	@echo "$(YELLOW)| |    | | '_ \|  _| __| | '_ \ "
-	@echo "$(YELLOW)| |____| | |_) | | | |_ _| | | |"
-	@echo "$(YELLOW)|______|_|_.__/|_|  \__(_)_| |_|"
-	@echo "$(YELLOW)\t\t\t\tBy Jobailla\n"
+	@echo "\t\t$(YELLOW) _      _ _      __ _     _     "
+	@echo "\t\t$(YELLOW)| |    (_) |    / _| |   | |    "
+	@echo "\t\t$(YELLOW)| |     _| |__ | |_| |_  | |__  "
+	@echo "\t\t$(YELLOW)| |    | | '_ \|  _| __| | '_ \ "
+	@echo "\t\t$(YELLOW)| |____| | |_) | | | |_ _| | | |"
+	@echo "\t\t$(YELLOW)|______|_|_.__/|_|  \__(_)_| |_|"
+	@echo "\t\t$(YELLOW)\t\t\t\tBy Jobailla\n"
 	@echo	"$(RED)NOTE: $(WHITE)Pour afficher la liste des commandes : \
 	$(GREEN)make help\n"
 	@echo "$(GREEN)[OK]\t$(BLUE)Compilation des fichiers objets"
@@ -47,8 +48,18 @@ $(NAME): $(O_FILE)
 	@echo "$(GREEN)[OK]\t$(BLUE)Creation de l'index pour $(NAME)\n"
 
 %.o: %.c
-	@$(COMPIL) -c $< -I $(INC_PATH) -o $@
-	@echo "$(GREEN)[OK]\t$(WHITE)Compilation du fichier : $@"
+	@$(COMPIL) -c $< -I $(INC_PATH) -o $@ 
+	@echo "$(GREEN)[OK]\t$(WHITE)Compilation en fichier objets : $@"
+	@# Les ligne suivante servent a compilier les mains avec les fonctions.
+	@# Les main se trouve dans le dossiser main_srcs.
+	@#                   A UTILISER POUR LES CORRECTIONS
+	@# Pour eviter les erreur d'inclusion la compilation se fait avec
+	@# le fichier libft.a donc :
+	@#                 - FAIRE UN PREMIER MAKE
+	@#                 - ACTIVER LES LIGNES 61 - 62 
+	@#                 - DESACTIVER LA LIGNE 83
+	@#$(COMPIL) $(MAIN_PATH)$(<:.c=_main.c) $(NAME) -o $*
+	@#@echo "$(YELLOW)[OK]\t$(WHITE)Compilation en fichier executable : $*"
 
 help:
 	@echo "$(YELLOW)\n\t\t====== AIDE ======\n"
@@ -61,6 +72,8 @@ help:
 
 norme:
 	@norminette $(SRC_PATH)/$(C_FILE)
+
+.PHONY: clean fclean
 
 clean:
 	@rm $(O_FILE)
