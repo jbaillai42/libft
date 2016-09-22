@@ -6,7 +6,7 @@
 #    By: jobailla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/09/22 23:31:35 by                  ###   ########.fr       *#
+#*   Updated: 2016/09/22 23:32:49 by                  ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,8 +61,8 @@ $(NAME): $(O_FILE)
 	@# Pour eviter les erreur d'inclusion la compilation se fait avec
 	@# le fichier libft.a donc :
 	@#                 - FAIRE UN PREMIER MAKE
-	@#                 - ACTIVER LES LIGNES 61 - 62 
-	@#                 - DESACTIVER LA LIGNE 83
+	@#                 - ACTIVER LES LIGNES 66 - 67 
+	@#                 - DESACTIVER LA LIGNE 88
 	@$(COMPIL) $(MAIN_PATH)$(<:.c=_main.c) $(NAME) -o $*
 	@@echo "$(YELLOW)[OK]\t$(WHITE)Compilation en fichier executable : $*"
 
