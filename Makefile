@@ -6,7 +6,7 @@
 #    By: jobailla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/09/22 23:32:49 by                  ###   ########.fr       *#
+#*   Updated: 2016/09/22 23:34:57 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ $(NAME): $(O_FILE)
 	@# Les ligne suivante servent a compilier les mains avec les fonctions.
 	@# Les main se trouve dans le dossiser main_srcs.
 	@#                   A UTILISER POUR LES CORRECTIONS
-	@# Pour eviter les erreur d'inclusion la compilation se fait avec
+	@# Pour eviter les erreurs d'inclusions la compilation se fait avec
 	@# le fichier libft.a donc :
 	@#                 - FAIRE UN PREMIER MAKE
 	@#                 - ACTIVER LES LIGNES 66 - 67 
