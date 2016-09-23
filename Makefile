@@ -6,12 +6,12 @@
 #    By: jobailla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/09/23 20:17:49 by                  ###   ########.fr       *#
+#*   Updated: 2016/09/24 01:19:59 by                  ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CORREC =
+CORREC = 
 NO = \#
 INC_PATH = includes
 SRC_PATH = srcs
@@ -19,7 +19,7 @@ O_PATH = objets
 EXEC_PATH = exec
 MAIN_PATH = main_
 SRC = $(addprefix $(SRC_PATH)/,$(C_FILE))
-C_FILE = ft_putchar.c #ft_putstr.c ft_strlen.c ft_strdup.c ft_strcpy.c \
+C_FILE = ft_putchar.c ft_putstr.c #ft_strlen.c ft_strdup.c ft_strcpy.c \
 		ft_strncpy.c ft_strcat.c ft_strstr.c ft_strcmp.c ft_strncmp.c \
 		ft_atoi.c ft_putnbr.c
 O_FILE = $(SRC:.c=.o)
@@ -54,15 +54,15 @@ $(NAME): $(O_FILE)
 	@ranlib $(NAME)
 	@echo "$(GREEN)[OK]\t$(BLUE)Creation de l'index pour $(NAME)\n"
 	@mkdir -p $(O_PATH) 
-	@$(CORREC)mkdir -p $(EXEC_PATH)
 	@mv $(O_FILE) ./$(O_PATH)/
-	@$(CORREC)mv $(SRC_PATH)/$(EXEC_FILE) ./$(EXEC_PATH)/
 
 %.o: %.c
+	@$(CORREC)mkdir -p $(EXEC_PATH)
 	@$(COMPIL) -c $< -I $(INC_PATH) -o $@ 
 	@echo "$(GREEN)[OK]\t$(WHITE)Compilation en fichier objets : $@"
 	@$(CORREC)$(COMPIL) $(MAIN_PATH)$(<:.c=_main.c) $(NAME) -o $*
 	@$(CORREC)echo "$(YELLOW)[OK]\t$(WHITE)Compilation en fichier executable : $*"
+	@$(CORREC)mv $* ./$(EXEC_PATH)/
 
 help:
 	@echo "$(YELLOW)\n\t\t================ AIDE ================\n"
@@ -88,7 +88,7 @@ clean:
 
 fclean:clean
 	@$(NO)rm -f $(NAME)
-	@rm -f $(SRC_PATH)/$(C_FILE:.c=)
+	@rm -f $(SRC_PATH)/$(C_FILE:.c=) $(O_FILE)
 	@echo "$(GREEN)[OK]\t$(RED)Suppression des des fichiers cree par le \
 	Makefile\n"
 
