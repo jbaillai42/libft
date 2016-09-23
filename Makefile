@@ -6,7 +6,7 @@
 #    By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/09/24 01:28:15 by jobailla         ###   ########.fr       *#
+#*   Updated: 2016/09/24 01:44:27 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -55,6 +55,13 @@ $(NAME): $(O_FILE)
 	@echo "$(GREEN)[OK]\t$(BLUE)Creation de l'index pour $(NAME)\n"
 	@mkdir -p $(O_PATH) 
 	@mv $(O_FILE) ./$(O_PATH)/
+	@echo "$(CYAN)\t*****************************************"
+	@echo "$(CYAN)\t*\t Localisation des fichiers\t*"
+	@echo "$(CYAN)\t*****************************************\n"
+	@echo "\t$(WHITE)Fichiers C :\t\t$(CYAN)$(SRC_PATH)/"
+	@echo "\t$(WHITE)Fichiers objets :\t$(CYAN)$(O_PATH)/"
+	@$(CORREC)echo "\t$(WHITE)Fichiers mains :\t$(CYAN)$(MAIN_PATH)srcs/"
+	@$(CORREC)echo "\t$(WHITE)Fichiers executabes :\t$(CYAN)$(EXEC_PATH)/\n"
 
 %.o: %.c
 	@$(CORREC)mkdir -p $(EXEC_PATH)
