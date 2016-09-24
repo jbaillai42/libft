@@ -6,7 +6,7 @@
 #    By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/09/24 01:44:27 by jobailla         ###   ########.fr       *#
+#*   Updated: 2016/09/24 17:04:49 by                  ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ O_PATH = objets
 EXEC_PATH = exec
 MAIN_PATH = main_
 SRC = $(addprefix $(SRC_PATH)/,$(C_FILE))
-C_FILE = ft_putchar.c ft_putstr.c #ft_strlen.c ft_strdup.c ft_strcpy.c \
+C_FILE = ft_putchar.c ft_putstr.c ft_strlen.c #ft_strdup.c ft_strcpy.c \
 		ft_strncpy.c ft_strcat.c ft_strstr.c ft_strcmp.c ft_strncmp.c \
 		ft_atoi.c ft_putnbr.c
 O_FILE = $(SRC:.c=.o)
@@ -66,9 +66,10 @@ $(NAME): $(O_FILE)
 %.o: %.c
 	@$(CORREC)mkdir -p $(EXEC_PATH)
 	@$(COMPIL) -c $< -I $(INC_PATH) -o $@ 
-	@echo "$(GREEN)[OK]\t$(WHITE)Compilation en fichier objets : $@"
+	@echo "$(GREEN)[OK]\t$(WHITE)Compilation en fichier objets :\t\t$(GREEN)$@"
 	@$(CORREC)$(COMPIL) $(MAIN_PATH)$(<:.c=_main.c) $(NAME) -o $*
-	@$(CORREC)echo "$(YELLOW)[OK]\t$(WHITE)Compilation en fichier executable : $*"
+	@$(CORREC)echo "$(YELLOW)[OK]\t$(WHITE)Compilation en fichier executable :\
+	\t$(YELLOW)$*\n"
 	@$(CORREC)mv $* ./$(EXEC_PATH)/
 
 help:
