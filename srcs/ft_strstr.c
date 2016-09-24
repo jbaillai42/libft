@@ -6,9 +6,11 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/09 21:58:20 by jobailla          #+#    #+#             */
-/*   Updated: 2016/08/11 10:39:20 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/09/24 17:11:08 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strstr(char *str, char *to_find)
 {

@@ -6,11 +6,13 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/08 17:54:53 by jobailla          #+#    #+#             */
-/*   Updated: 2016/08/24 02:53:06 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/09/24 17:09:03 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_putchar(char c);
+#include "libft.h"
+
+void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {

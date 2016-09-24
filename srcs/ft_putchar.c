@@ -6,14 +6,13 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/03 17:46:45 by jobailla          #+#    #+#             */
-/*   Updated: 2016/08/12 14:52:39 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/09/24 17:07:52 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-int		ft_putchar(char c)
+void	ft_putchar(char c)
 {
 	write(1, &c, 1);
-	return (0);
 }

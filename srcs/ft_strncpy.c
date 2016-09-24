@@ -6,9 +6,11 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/09 16:59:48 by jobailla          #+#    #+#             */
-/*   Updated: 2016/08/11 10:08:20 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/09/24 17:10:48 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
