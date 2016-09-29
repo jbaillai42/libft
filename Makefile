@@ -6,12 +6,12 @@
 #    By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/09/24 17:12:42 by jobailla         ###   ########.fr       *#
+#*   Updated: 2016/09/29 02:11:23 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CORREC = 
+CORREC =  
 NO = \#
 INC_PATH = includes
 SRC_PATH = srcs
@@ -19,11 +19,27 @@ O_PATH = objets
 EXEC_PATH = exec
 MAIN_PATH = main_
 SRC = $(addprefix $(SRC_PATH)/,$(C_FILE))
-C_FILE = ft_putchar.c ft_putstr.c ft_strlen.c #ft_strdup.c ft_strcpy.c \
-		ft_strncpy.c ft_strcat.c ft_strstr.c ft_strcmp.c ft_strncmp.c \
-		ft_atoi.c ft_putnbr.c
+C_FILE = ft_putchar.c \
+		ft_putstr.c \
+		ft_strlen.c \
+		ft_isalpha.c \
+		ft_isdigit.c \
+		ft_isalnum.c \
+		ft_isascii.c \
+		ft_isprint.c \
+		ft_tolower.c \
+		ft_toupper.c \
+		#ft_strdup.c \
+		ft_strcpy.c \
+		ft_strncpy.c \
+		ft_strcat.c \
+		ft_strstr.c \
+		ft_strcmp.c \
+		ft_strncmp.c \
+		ft_atoi.c \
+		ft_putnbr.c 
 O_FILE = $(SRC:.c=.o)
-EXEC_FILE = $(C_FILE:.c=)
+EXEC_FILE = $(C_FILE:.)
 COMPIL = clang -Wall -Wextra -Werror
 RED = \033[0;31m
 BLUE = \033[1;34m
@@ -43,7 +59,7 @@ $(NAME): $(O_FILE)
 	@echo "\t\t$(YELLOW)| |____| | |_) | | | |_ _| | | |"
 	@echo "\t\t$(YELLOW)|______|_|_.__/|_|  \__(_)_| |_|"
 	@echo "\t\t$(YELLOW)\t\t\t\tBy Jobailla\n"
-	@echo	"$(RED)NOTE: $(WHITE)Pour afficher la liste des commandes : \
+	@echo	"   $(RED)NOTE: $(WHITE)Pour afficher la liste des commandes : \
 	$(GREEN)make help\n"
 	@$(CORREC)echo "$(MAGENTA)\t*****************************************"
 	@$(CORREC)echo "$(MAGENTA)\t*\t Mode Correction Actif\t\t*"
