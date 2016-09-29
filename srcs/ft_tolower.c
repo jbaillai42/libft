@@ -1,34 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/08 18:06:40 by jobailla          #+#    #+#             */
-/*   Updated: 2016/09/29 01:27:07 by                  ###   ########.fr       */
+/*   Created: 2016/09/29 00:16:17 by jobailla          #+#    #+#             */
+/*   Updated: 2016/09/29 00:54:30 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-void	ft_putnbr(int nb)
+int		ft_tolower(int n)
 {
-	long long int n;
-
-	n = nb;
-	if (nb < 0)
-	{
-		ft_putchar('-');
-		n = -n;
-	}
-	if (n >= 10)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else
-	{
-		ft_putchar(n + '0');
-	}
+	if (n >= 'A' && n <= 'Z')
+		n = n + 32;
+	return(n);
 }

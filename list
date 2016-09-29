@@ -19,13 +19,13 @@ ft_strnstr
 ft_strcmp		OK
 ft_strncmp		OK
 ft_atoi			OK
-ft_isalpha		
-ft_isdigit		
-ft_isalnum		
-ft_isascii		
-ft_isprint		
-ft_toupper		
-ft_tolower		
+ft_isalpha		OK
+ft_isdigit		OK
+ft_isalnum		OK
+ft_isascii		OK
+ft_isprint		OK
+ft_toupper		OK
+ft_tolower		OK
 
 ft_memalloc		
 ft_memdel		

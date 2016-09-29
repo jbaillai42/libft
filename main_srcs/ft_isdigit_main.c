@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_isdigit_main.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/08 18:06:40 by jobailla          #+#    #+#             */
-/*   Updated: 2016/09/29 01:27:07 by                  ###   ########.fr       */
+/*   Created: 2016/09/29 01:30:33 by jobailla          #+#    #+#             */
+/*   Updated: 2016/09/29 01:32:52 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../includes/libft.h"
 
-void	ft_putnbr(int nb)
+int		main(int argc, char **argv)
 {
-	long long int n;
+	int		i;
 
-	n = nb;
-	if (nb < 0)
+	i = 1;
+	while (i < argc)
 	{
-		ft_putchar('-');
-		n = -n;
-	}
-	if (n >= 10)
-	{
-		ft_putnbr(n / 10);
-		ft_putnbr(n % 10);
-	}
-	else
-	{
-		ft_putchar(n + '0');
+		ft_putstr("ft_isdigit = ");
+		ft_putnbr(ft_isdigit(*argv[i]));
+		ft_putchar('\n');
+		ft_putstr("isdigit = ");
+		printf("%d", isdigit(*argv[i]));
+		i++;
 	}
 }
