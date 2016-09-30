@@ -6,17 +6,17 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 02:23:39 by jobailla          #+#    #+#             */
-/*   Updated: 2016/09/30 02:25:26 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/09/30 03:06:40 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_ispunct(int n)
+int		ft_isxdigit(int n)
 {
-	if ((n >= 49 || n <= 57)
-	&& (n >= 65 || n <= 90)
-	&& (n >= 97 || n <= 122))
+	if ((ft_isxdigit(n) == 1)
+	&& (ft_isupper(n) == 1)
+	&& (ft_islower(n) == 1))
 		return (1);
 	return (0);
 }

@@ -6,15 +6,15 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 02:19:00 by jobailla          #+#    #+#             */
-/*   Updated: 2016/09/30 02:20:15 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/09/30 03:09:08 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_ispunct(int n)
+int		ft_islower(int n)
 {
-	if (n >= 96 || n <= 122)
+	if (n >= 'a' && n <= 'z')
 		return (1);
 	return (0);
 }

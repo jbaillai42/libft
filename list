@@ -8,7 +8,7 @@ ft_memmove
 ft_memchr		
 ft_memcmp		
 ft_strlen		OK
-ft_strdup		OK
+ft_strdup		A revoir => protection du malloc + size
 ft_strcpy		OK
 ft_strncpy		OK
 ft_strcat		OK
@@ -58,6 +58,7 @@ ft_putnbr_fd
 
 BONNUS :
 
+ft_isblank		OK
 ft_istnew
 ft_isdelone
 ft_isdel
@@ -66,7 +67,6 @@ ft_isadd
 PERSO :
 
 ft_isspace		OK
-ft_isblank		OK
 ft_isgraph		OK
 ft_ispunct		OK
 ft_islower		OK

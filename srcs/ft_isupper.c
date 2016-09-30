@@ -6,15 +6,15 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 02:20:31 by jobailla          #+#    #+#             */
-/*   Updated: 2016/09/30 02:21:58 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/09/30 03:09:31 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_ispunct(int n)
+int		ft_isupper(int n)
 {
-	if (n >= 65 || n <= 90)
+	if (n >= 'A' && n <= 'Z')
 		return (1);
 	return (0);
 }
