@@ -6,9 +6,11 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/29 00:57:50 by jobailla          #+#    #+#             */
-/*   Updated: 2016/09/29 01:00:03 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/09/30 16:50:46 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_isprint(int n)
 {

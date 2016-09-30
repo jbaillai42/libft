@@ -6,9 +6,11 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/29 00:50:37 by jobailla          #+#    #+#             */
-/*   Updated: 2016/09/29 00:56:08 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/09/30 16:47:36 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int		ft_isascii(int n)
 {

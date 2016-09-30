@@ -1,26 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/15 10:15:19 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/01 01:17:17 by jobailla         ###   ########.fr       */
+/*   Created: 2016/09/30 23:34:24 by jobailla          #+#    #+#             */
+/*   Updated: 2016/09/30 23:48:36 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(char *src)
+char	*ft_strnew(size_t siize)
 {
-	int		i;
-	char	*dest;
+	char	*str;
 
-	i = 0;
-	dest = (char *)malloc(sizeof(char) * (ft_strlen(src) + 1));
-	if (!dest)
-		return (NULL);
-		ft_strcpy(dest, src);
-	return (dest);
+	if(!(str = (char *
 }

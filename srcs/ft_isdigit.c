@@ -6,10 +6,11 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/29 00:38:59 by jobailla          #+#    #+#             */
-/*   Updated: 2016/09/29 00:57:00 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/09/30 16:47:53 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 
 int		ft_isdigit(int n)
 {

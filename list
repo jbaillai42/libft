@@ -1,26 +1,26 @@
 PARTIE 1 :
 
-ft_memset		
-ft_bzero		
+ft_memset		[CRASH] [CRASH] [CRASH] [OK] [OK] [CRASH]
+ft_bzero		[OK] [OK] [OK] Mais le memset deconne donc a revoir
 ft_memcpy		
 ft_memccpy		
 ft_memmove		
 ft_memchr		
 ft_memcmp		
-ft_strlen		[OK]
-ft_strdup		A revoir => protection du malloc + size
-ft_strcpy		[OK]
-ft_strncpy		[OK]
-ft_strcat		[OK]
+ft_strlen		[OK] [OK] [OK] [OK] [OK]
+ft_strdup		[OK] [OK] [OK] [OK] [OK] [OK]
+ft_strcpy		[OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
+ft_strncpy		[OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
+ft_strcat		[OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
 ft_strncat		
 ft_strlcat		
 ft_strchr		
 ft_strrchr		
-ft_strstr		[OK]
+ft_strstr		[OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
 ft_strnstr		
-ft_strcmp		[OK]
-ft_strncmp		[OK]
-ft_atoi			[OK]
+ft_strcmp		[OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
+ft_strncmp		[OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
+ft_atoi			[OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
 ft_isalpha		[OK]
 ft_isdigit		[OK]
 ft_isalnum		[OK]
@@ -47,10 +47,10 @@ ft_strjoin
 ft_strtrim		
 ft_strsplit		
 ft_itoa			
-ft_putchar		[OK]
-ft_putstr		[OK]
+ft_putchar		[OK] [OK] [KO] Soucis avec Unicode ?
+ft_putstr		[OK] [OK] [||]
 ft_putendl		
-ft_putnbr		[OK]
+ft_putnbr		[OK] [OK] [OK] [OK] [OK]
 ft_putchar_fd	
 ft_putstr_fd	
 ft_putendl_fd	
