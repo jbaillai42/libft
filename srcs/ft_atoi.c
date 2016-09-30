@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/09 09:57:20 by jobailla          #+#    #+#             */
-/*   Updated: 2016/09/24 17:07:44 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/09/30 01:07:47 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,14 @@ int		ft_atoi(char *str)
 	i = 0;
 	ret = 0;
 	neg = 0;
-	while (str[i] == '\n' || str[i] == '\0' || str[i] == ' ')
+	while (str[i] == '\n' || str[i] == '\t' || str[i] == '\f'
+			|| str[i] == '\r' || str[i] == '\v'|| str[i] == ' ')
 		i++;
 	if (str[0] == '-')
 		neg = 1;
 	if (str[0] == '-' || str[i] == '+')
 		i++;
-	while (str[i] >= '0' && str[i] <= '9')
+	while (ft_isdigit(str[i]) == 1)
 	{
 		ret = ret * 10;
 		ret = ret + str[i] - '0';

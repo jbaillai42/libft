@@ -1,3 +1,5 @@
+PARTIE 1 :
+
 ft_memset		
 ft_bzero		
 ft_memcpy		
@@ -27,6 +29,8 @@ ft_isprint		OK
 ft_toupper		OK
 ft_tolower		OK
 
+PARTIE 2 :
+
 ft_memalloc		
 ft_memdel		
 ft_strnew		
@@ -51,3 +55,20 @@ ft_putchar_fd
 ft_putstr_fd	
 ft_putendl_fd	
 ft_putnbr_fd	
+
+BONNUS :
+
+ft_istnew
+ft_isdelone
+ft_isdel
+ft_isadd
+
+PERSO :
+
+ft_isspace		OK
+ft_isblank		OK
+ft_isgraph		OK
+ft_ispunct		OK
+ft_islower		OK
+ft_isupper		OK
+ft_isxdigit		OK

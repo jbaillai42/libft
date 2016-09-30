@@ -6,13 +6,13 @@
 #    By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/09/29 02:11:23 by jobailla         ###   ########.fr       *#
+#*   Updated: 2016/09/30 02:33:41 by                  ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
-CORREC =  
-NO = \#
+CORREC = \#
+NO = 
 INC_PATH = includes
 SRC_PATH = srcs
 O_PATH = objets
@@ -24,11 +24,19 @@ C_FILE = ft_putchar.c \
 		ft_strlen.c \
 		ft_isalpha.c \
 		ft_isdigit.c \
+		ft_isxdigit.c \
 		ft_isalnum.c \
 		ft_isascii.c \
 		ft_isprint.c \
 		ft_tolower.c \
 		ft_toupper.c \
+		ft_atoi.c \
+		ft_isspace.c \
+		ft_isblank.c \
+		ft_isgraph.c \
+		ft_ispunct.c \
+		ft_islower.c \
+		ft_isupper.c \
 		#ft_strdup.c \
 		ft_strcpy.c \
 		ft_strncpy.c \
@@ -36,7 +44,6 @@ C_FILE = ft_putchar.c \
 		ft_strstr.c \
 		ft_strcmp.c \
 		ft_strncmp.c \
-		ft_atoi.c \
 		ft_putnbr.c 
 O_FILE = $(SRC:.c=.o)
 EXEC_FILE = $(C_FILE:.)
@@ -61,6 +68,7 @@ $(NAME): $(O_FILE)
 	@echo "\t\t$(YELLOW)\t\t\t\tBy Jobailla\n"
 	@echo	"   $(RED)NOTE: $(WHITE)Pour afficher la liste des commandes : \
 	$(GREEN)make help\n"
+	
 	@$(CORREC)echo "$(MAGENTA)\t*****************************************"
 	@$(CORREC)echo "$(MAGENTA)\t*\t Mode Correction Actif\t\t*"
 	@$(CORREC)echo "$(MAGENTA)\t*****************************************\n"
@@ -69,6 +77,7 @@ $(NAME): $(O_FILE)
 	@echo "$(GREEN)[OK]\t$(BLUE)Creation de la librairie"
 	@ranlib $(NAME)
 	@echo "$(GREEN)[OK]\t$(BLUE)Creation de l'index pour $(NAME)\n"
+	
 	@mkdir -p $(O_PATH) 
 	@mv $(O_FILE) ./$(O_PATH)/
 	@echo "$(CYAN)\t*****************************************"
@@ -110,9 +119,9 @@ clean:
 	@rm -rf $(O_PATH) $(EXEC_PATH)
 	@echo "$(GREEN)[OK]\t$(RED) Suppression des fichiers objets"
 
-fclean:clean
+fclean: clean
 	@$(NO)rm -f $(NAME)
-	@rm -f $(SRC_PATH)/$(C_FILE:.c=) $(O_FILE)
+	@rm -rf $(O_PATH) $(EXEC_PATH)
 	@echo "$(GREEN)[OK]\t$(RED)Suppression des des fichiers cree par le \
 	Makefile\n"
 
