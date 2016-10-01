@@ -47,7 +47,7 @@ ft_strjoin
 ft_strtrim		
 ft_strsplit		
 ft_itoa			
-ft_putchar		[OK] [OK] [KO] Soucis avec Unicode ?
+ft_putchar		[OK] [OK] [KO] Ne gére pas l'unicode (voir wchar)
 ft_putstr		[OK] [OK] [||]
 ft_putendl		
 ft_putnbr		[OK] [OK] [OK] [OK] [OK]
