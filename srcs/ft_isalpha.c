@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/29 00:31:35 by jobailla          #+#    #+#             */
-/*   Updated: 2016/09/30 16:46:12 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/10/03 22:56:22 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_isalpha(int n)
 {
-	if ((n >= 'A' && n <= 'Z') || (n >= 'a' && n <= 'z'))
+	if ((ft_isupper(n) == 1) || (ft_islower(n) == 1))
 		return(1);
 	return(0);
 }
