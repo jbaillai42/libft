@@ -6,7 +6,7 @@
 #    By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/10/01 00:09:37 by jobailla         ###   ########.fr       *#
+#*   Updated: 2016/10/03 21:51:46 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,9 @@ C_FILE = ft_putchar.c \
 		ft_isupper.c \
 		ft_isxdigit.c \
 		ft_memset.c \
-		ft_bzero.c
+		ft_bzero.c \
+		ft_strncat.c \
+		ft_strnstr.c
 O_FILE = $(SRC:.c=.o)
 EXEC_FILE = $(C_FILE:.)
 COMPIL = clang -Wall -Wextra -Werror

@@ -72,3 +72,5 @@ ft_isspace		[OK]
 ft_isgraph		[OK]
 ft_ispunct		[OK]
 ft_isxdigit		[OK]
+ft_memrchr		
+ft_strndup		
