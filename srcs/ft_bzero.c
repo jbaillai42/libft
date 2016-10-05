@@ -6,13 +6,13 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/01 00:02:06 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/01 00:06:12 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/10/05 18:59:31 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t c)
+void	ft_bzero(void *s, size_t n)
 {
-	ft_memset(0, s, c);
+	ft_memset(s, 0, n);
 }

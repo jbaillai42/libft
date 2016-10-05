@@ -6,15 +6,15 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 02:20:31 by jobailla          #+#    #+#             */
-/*   Updated: 2016/09/30 03:09:31 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/10/05 19:03:31 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isupper(int n)
+int		ft_isupper(int c)
 {
-	if (n >= 'A' && n <= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		return (1);
 	return (0);
 }

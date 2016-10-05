@@ -6,15 +6,15 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 01:05:49 by jobailla          #+#    #+#             */
-/*   Updated: 2016/09/30 16:45:27 by                  ###   ########.fr       */
+/*   Updated: 2016/10/05 19:01:51 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isblank(int n)
+int		ft_isblank(int c)
 {
-	if (n == '\t' || n == ' ')
+	if (c == '\t' || c == ' ')
 		return (1);
 	return (0);
 }

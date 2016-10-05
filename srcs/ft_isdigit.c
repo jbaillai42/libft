@@ -6,15 +6,15 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/29 00:38:59 by jobailla          #+#    #+#             */
-/*   Updated: 2016/09/30 16:47:53 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/10/05 19:02:01 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_isdigit(int n)
+int		ft_isdigit(int c)
 {
-	if (n >= '0' && n <= '9')
+	if (c >= '0' && c <= '9')
 		return(1);
 	return(0);
 }

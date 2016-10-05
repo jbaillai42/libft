@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/03 17:46:45 by jobailla          #+#    #+#             */
-/*   Updated: 2016/09/29 00:11:58 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/10/05 19:48:58 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,5 @@
 
 void	ft_putchar(char c)
 {
-	unsigned char ch;
-
-	ch  = (unsigned char)c;
-	write(1, &ch, 1);
+	write(1, &c, 1);
 }

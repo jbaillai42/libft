@@ -74,3 +74,5 @@ ft_ispunct		[OK]
 ft_isxdigit		[OK]
 ft_memrchr		
 ft_strndup		
+strchrnul		
+strcasestr

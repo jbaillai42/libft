@@ -6,14 +6,14 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 00:57:54 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/03 22:55:23 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/10/05 19:03:18 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isspace(int n)
+int		ft_isspace(int c)
 {
-	if (n == '\t' || n == '\n' || n == '\v' || n == '\f' || n == '\r'
-	|| n == ' ')
+	if (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r'
+	|| c == ' ')
 		return (1);
 	return (0);
 }

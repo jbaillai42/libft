@@ -6,24 +6,24 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 23:52:05 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/01 00:12:56 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/10/05 18:56:48 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(int n, void *s, size_t c)
+void	*ft_memset(void *b, int c, size_t len)
 {
 	unsigned char	*mem;
 
-	if (c == 0)
-		return (s);
-	mem = (unsigned char *)s;
-	while (c)
+	if (len == 0)
+		return (b);
+	mem = (unsigned char *)b;
+	while (len)
 	{
-		*mem = (unsigned char)n;
+		*mem = (unsigned char)c;
 		mem++;
-		c--;
+		len--;
 	}
-	return (s);
+	return (b);
 }
