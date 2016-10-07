@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/09 21:58:20 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/05 22:57:14 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/10/07 17:26:09 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strstr(const char *big, const char *little)
 	int j;
 
 	i = 0;
-	if (little[0] == '\0')
+	if ((*little == '\0' || ft_isspace(*little == 1)) && (big))
 		return (char *)big;
 	while (big[i] != '\0')
 	{

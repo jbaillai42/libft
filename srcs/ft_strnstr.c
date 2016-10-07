@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/02 23:54:39 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/05 23:00:16 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/10/07 17:38:40 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,18 +17,23 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 	size_t i;
 	size_t j;
 
-	len = 0;
 	i = 0;
-	if ((little[i] == '\0') && (i < len))
+	if ((little[0] == '\0' || ft_isspace(*little == 1)) && (big))
 		return (char *)big;
-	while (big[i] != '\0')
+	while (i <= len)
 	{
 		j = 0;
 		while (little[j] == big[j + i])
 		{
+			if (big < little)
+				return (0);
 			if (little[j + 1] == '\0')
 				return (char *)big + i;
+			if (!len && little[j + 1] == '\0')
+				return (char *)big;
+			;
 			j++;
+			len--;
 		}
 		i++;
 	}
