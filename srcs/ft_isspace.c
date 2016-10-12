@@ -6,14 +6,15 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 00:57:54 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/05 19:03:18 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/10/12 13:09:39 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int		ft_isspace(int c)
 {
-	if (c == '\t' || c == '\n' || c == '\v' || c == '\f' || c == '\r'
-	|| c == ' ')
+	if (ft_isblank(c) || c == '\n' || c == '\v' || c == '\f' || c == '\r')
 		return (1);
 	return (0);
 }

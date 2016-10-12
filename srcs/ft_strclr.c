@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strclr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/15 10:15:19 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/12 13:34:12 by jobailla         ###   ########.fr       */
+/*   Created: 2016/10/12 11:48:11 by jobailla          #+#    #+#             */
+/*   Updated: 2016/10/12 13:13:08 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Dupliquer une chaîne. */
+/* Assigne la valeur ’\0’ à tous les caractères de la chaine passée
+	en paramètre. */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+void	ft_strclr(char *s)
 {
-	char	*s2;
 
-	s2 = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
-	if (s2 != NULL)
-		ft_strcpy(s2, s1);
-	return (s2);
 }
