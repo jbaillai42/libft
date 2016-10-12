@@ -12,12 +12,12 @@ ft_strdup		[OK] [OK] [OK] [OK] [OK] [OK]
 ft_strcpy		[OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
 ft_strncpy		[OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
 ft_strcat		[OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
-ft_strncat		
+ft_strncat		[OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
 ft_strlcat		
 ft_strchr		
 ft_strrchr		
 ft_strstr		[OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
-ft_strnstr		
+ft_strnstr		[OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
 ft_strcmp		[OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
 ft_strncmp		[OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
 ft_atoi			[OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK] [OK]
@@ -51,10 +51,10 @@ ft_putchar		[OK] [OK] [KO] Ne gére pas l'unicode (voir wchar)
 ft_putstr		[OK] [OK] [||]
 ft_putendl		
 ft_putnbr		[OK] [OK] [OK] [OK] [OK]
-ft_putchar_fd	
-ft_putstr_fd	
+ft_putchar_fd	[OK] [OK] [KO]
+ft_putstr_fd	[OK] [OK] [💥 ]
 ft_putendl_fd	
-ft_putnbr_fd	
+ft_putnbr_fd	[OK] [OK] [OK] [OK] [OK]
 
 BONNUS :
 
@@ -72,7 +72,7 @@ ft_isspace		[OK]
 ft_isgraph		[OK]
 ft_ispunct		[OK]
 ft_isxdigit		[OK]
+ft_isnull		[OK]
 ft_memrchr		
 ft_strndup		
-strchrnul		
-strcasestr
+ft_strcasestr	
