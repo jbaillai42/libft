@@ -6,9 +6,11 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/02 23:54:39 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/07 17:38:40 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/10/12 11:39:24 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Rechercher une sous-chaîne. */
 
 #include "libft.h"
 
@@ -31,7 +33,6 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 				return (char *)big + i;
 			if (!len && little[j + 1] == '\0')
 				return (char *)big;
-			;
 			j++;
 			len--;
 		}

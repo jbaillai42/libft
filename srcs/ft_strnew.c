@@ -5,16 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/30 23:34:24 by jobailla          #+#    #+#             */
-/*   Updated: 2016/09/30 23:48:36 by jobailla         ###   ########.fr       */
+/*   Created: 2016/10/12 11:44:50 by jobailla          #+#    #+#             */
+/*   Updated: 2016/10/12 11:50:01 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/* Alloue (avec malloc(3)) et retourne une chaine de caractère “fraiche” 
+	terminée par un ’\0’. Chaque caractère de la chaine est initialisé à ’\0’.
+	Si l’allocation echoue, la fonction renvoie NULL. */
+
 #include "libft.h"
 
-char	*ft_strnew(size_t siize)
+char	*ft_strnew(size_t size)
 {
-	char	*str;
 
-	if(!(str = (char *
 }

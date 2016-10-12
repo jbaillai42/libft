@@ -6,9 +6,11 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/03 17:46:45 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/05 19:48:58 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/10/12 11:32:27 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Affiche le caractere c sur la sortie standard. */
 
 #include "libft.h"
 

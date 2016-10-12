@@ -6,9 +6,11 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 23:52:05 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/05 18:56:48 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/10/12 11:30:33 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Remplir une zone mémoire avec un octet donné. */
 
 #include "libft.h"
 

@@ -6,9 +6,11 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/09 09:57:20 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/05 18:52:21 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/10/12 11:28:30 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Convertir une chaîne en entier  */
 
 #include "libft.h"
 

@@ -1,31 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/02 23:41:30 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/12 11:37:27 by jobailla         ###   ########.fr       */
+/*   Created: 2016/10/12 12:05:06 by jobailla          #+#    #+#             */
+/*   Updated: 2016/10/12 12:06:24 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Concaténer deux chaînes */
+/* Alloue (avec malloc(3)) et retourne une chaine de caractères “fraiche”
+	terminée par un ’\0’ représentant l’entier n passé en paramètre.
+	Les nombres négatifs doivent être gérés. Si l’al- location échoue,
+	la fonction renvoie NULL. */
 
 #include "libft.h"
 
-char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
+char	*ft_itoa(int n)
 {
-	size_t	i;
-	int		len;
 
-	i = 0;
-	len = ft_strlen(s1);
-	while ((s2[i] != '\0') && (i < n))
-	{
-		s1[len + i] = s2[i];
-		i++;
-	}
-	s1[i + len] = '\0';
-	return (s1);
 }

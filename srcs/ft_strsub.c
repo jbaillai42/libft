@@ -1,31 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/02 23:41:30 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/12 11:37:27 by jobailla         ###   ########.fr       */
+/*   Created: 2016/10/12 11:59:18 by jobailla          #+#    #+#             */
+/*   Updated: 2016/10/12 12:00:46 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Concaténer deux chaînes */
+/* Alloue (avec malloc(3)) et retourne la copie “fraiche” d’un tronçon de
+	la chaine de caractères passée en paramètre. Le tronçon commence à
+	l’index start et à pour longueur len. Si start et len ne désignent pas
+	un tronçon de chaine valide, le comportement est indéterminé.
+	Si l’allocation échoue, la fonction renvoie NULL. */
 
 #include "libft.h"
 
-char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
+char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	size_t	i;
-	int		len;
 
-	i = 0;
-	len = ft_strlen(s1);
-	while ((s2[i] != '\0') && (i < n))
-	{
-		s1[len + i] = s2[i];
-		i++;
-	}
-	s1[i + len] = '\0';
-	return (s1);
 }

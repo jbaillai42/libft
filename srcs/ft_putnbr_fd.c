@@ -1,31 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/02 23:41:30 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/12 11:37:27 by jobailla         ###   ########.fr       */
+/*   Created: 2016/10/11 23:28:31 by jobailla          #+#    #+#             */
+/*   Updated: 2016/10/12 11:27:05 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Concaténer deux chaînes */
+/* Ecrit l’entier n sur le descripteur de fichier fd. */
 
 #include "libft.h"
 
-char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
+void	ft_putnbr_fd(int n, int fd)
 {
-	size_t	i;
-	int		len;
+	long nb;
 
-	i = 0;
-	len = ft_strlen(s1);
-	while ((s2[i] != '\0') && (i < n))
+	nb = (long)n;
+	if (nb < 0)
 	{
-		s1[len + i] = s2[i];
-		i++;
+		ft_putchar_fd('-', fd);
+		nb = -nb;
 	}
-	s1[i + len] = '\0';
-	return (s1);
+	if (nb >= 10)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putchar_fd(nb % 10 + '0', fd);
+	}
+	else
+		ft_putchar_fd(n + '0', fd);
 }

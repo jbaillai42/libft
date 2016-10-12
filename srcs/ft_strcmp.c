@@ -6,9 +6,11 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/10 12:01:46 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/05 22:51:48 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/10/12 11:33:30 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/* Comparaison de deux chaînes. */
 
 #include "libft.h"
 

@@ -1,31 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_strnequ.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/02 23:41:30 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/12 11:37:27 by jobailla         ###   ########.fr       */
+/*   Created: 2016/10/12 11:57:45 by jobailla          #+#    #+#             */
+/*   Updated: 2016/10/12 11:59:05 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Concaténer deux chaînes */
+/* Compare lexicographiquement s1 et s2 jusqu’à n caractères maximum ou bien 
+	qu’un ’\0’ ait été rencontré. Si les deux chaines sont égales, la fonction
+	retourne 1, ou 0 sinon. */
 
 #include "libft.h"
 
-char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
+int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
-	size_t	i;
-	int		len;
 
-	i = 0;
-	len = ft_strlen(s1);
-	while ((s2[i] != '\0') && (i < n))
-	{
-		s1[len + i] = s2[i];
-		i++;
-	}
-	s1[i + len] = '\0';
-	return (s1);
 }

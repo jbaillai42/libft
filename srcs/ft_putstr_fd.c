@@ -1,31 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncat.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/02 23:41:30 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/12 11:37:27 by jobailla         ###   ########.fr       */
+/*   Created: 2016/10/12 11:17:29 by jobailla          #+#    #+#             */
+/*   Updated: 2016/10/12 11:23:26 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Concaténer deux chaînes */
+/* Ecrit la chaine s sur le descripteur de fichier fd. */
 
 #include "libft.h"
 
-char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
+void	ft_putstr_fd(char const *s, int fd)
 {
-	size_t	i;
-	int		len;
+	int i;
 
 	i = 0;
-	len = ft_strlen(s1);
-	while ((s2[i] != '\0') && (i < n))
+	while(s[i] != '\0')
 	{
-		s1[len + i] = s2[i];
-		i++;
+		ft_putchar_fd(s[i++], fd);
 	}
-	s1[i + len] = '\0';
-	return (s1);
 }
