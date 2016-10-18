@@ -6,19 +6,27 @@
 #    By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/10/12 11:23:49 by jobailla         ###   ########.fr       *#
+#*   Updated: 2016/10/18 19:58:09 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
+COMPIL = clang -Wall -Wextra -Werror
+
+# CORRECTION MODE #
 CORREC = \#
 NO = 
+
+
+# PATHS #
 INC_PATH = includes
 SRC_PATH = srcs
 O_PATH = objets
 EXEC_PATH = exec
 MAIN_PATH = main_
 SRC = $(addprefix $(SRC_PATH)/,$(C_FILE))
+
+# FILES #
 C_FILE = ft_putchar.c \
 		ft_putstr.c \
 		ft_strlen.c \
@@ -54,7 +62,9 @@ C_FILE = ft_putchar.c \
 		ft_putstr_fd.c
 O_FILE = $(SRC:.c=.o)
 EXEC_FILE = $(C_FILE:.)
-COMPIL = clang -Wall -Wextra -Werror
+
+# COLORS #
+
 RED = \033[0;31m
 BLUE = \033[1;34m
 CYAN = \033[0;36m
@@ -97,7 +107,7 @@ $(NAME): $(O_FILE)
 
 %.o: %.c
 	@$(CORREC)mkdir -p $(EXEC_PATH)
-	@$(COMPIL) -c $< -I $(INC_PATH) -o $@ 
+	@$(COMPIL) -c $< -I $(INC_PATH) -o $@
 	@echo "$(GREEN)[OK]\t$(WHITE)Compilation en fichier objets :\t\t$(GREEN)$@"
 	@$(CORREC)$(COMPIL) $(MAIN_PATH)$(<:.c=_main.c) $(NAME) -o $*
 	@$(CORREC)echo "$(YELLOW)[OK]\t$(WHITE)Compilation en fichier executable :\
@@ -122,6 +132,9 @@ help:
 norme:
 	@norminette $(SRC_PATH)/$(C_FILE)
 
+verif: ../libft_unit_test/
+	./verif.sh
+
 clean:
 	@rm -rf $(O_PATH) $(EXEC_PATH)
 	@echo "$(GREEN)[OK]\t$(RED) Suppression des fichiers objets"
@@ -134,4 +147,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all $(NAME) help norme clean flcean re
+.PHONY: all $(NAME) help norme verif clean flcean re
