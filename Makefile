@@ -6,7 +6,7 @@
 #    By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/10/18 19:58:09 by jobailla         ###   ########.fr       *#
+#*   Updated: 2016/10/18 23:01:52 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,70 +64,69 @@ O_FILE = $(SRC:.c=.o)
 EXEC_FILE = $(C_FILE:.)
 
 # COLORS #
-
-RED = \033[0;31m
-BLUE = \033[1;34m
+R = \033[0;31m
+G = \033[0;32m
+B = \033[1;34m
+Y = \033[0;33m
+W = \033[0;97m
 CYAN = \033[0;36m
-GREEN = \033[0;32m
-YELLOW = \033[0;33m
-WHITE = \033[0;97m
 MAGENTA = \033[0;35m
 
 all: $(NAME)
 
 $(NAME): $(O_FILE)
-	@echo "\t\t$(YELLOW) _      _ _      __ _     _     "
-	@echo "\t\t$(YELLOW)| |    (_) |    / _| |   | |    "
-	@echo "\t\t$(YELLOW)| |     _| |__ | |_| |_  | |__  "
-	@echo "\t\t$(YELLOW)| |    | | '_ \|  _| __| | '_ \ "
-	@echo "\t\t$(YELLOW)| |____| | |_) | | | |_ _| | | |"
-	@echo "\t\t$(YELLOW)|______|_|_.__/|_|  \__(_)_| |_|"
-	@echo "\t\t$(YELLOW)\t\t\t\tBy Jobailla\n"
-	@echo	"   $(RED)NOTE: $(WHITE)Pour afficher la liste des commandes : \
-	$(GREEN)make help\n"
+	@echo "\t\t$(Y) _      _ _      __ _     _     "
+	@echo "\t\t$(Y)| |    (_) |    / _| |   | |    "
+	@echo "\t\t$(Y)| |     _| |__ | |_| |_  | |__  "
+	@echo "\t\t$(Y)| |    | | '_ \|  _| __| | '_ \ "
+	@echo "\t\t$(Y)| |____| | |_) | | | |_ _| | | |"
+	@echo "\t\t$(Y)|______|_|_.__/|_|  \__(_)_| |_|"
+	@echo "\t\t$(Y)\t\t\t\tBy Jobailla\n"
+	@echo	"   $(R)NOTE: $(W)Pour afficher la liste des commandes : \
+	$(G)make help\n"
 	
 	@$(CORREC)echo "$(MAGENTA)\t*****************************************"
 	@$(CORREC)echo "$(MAGENTA)\t*\t Mode Correction Actif\t\t*"
 	@$(CORREC)echo "$(MAGENTA)\t*****************************************\n"
-	@echo "$(GREEN)[OK]\t$(BLUE)Compilation des fichiers objets"
+	@echo "$(G)[OK]\t$(B)Compilation des fichiers objets"
 	@ar rc $(NAME) $(O_FILE)
-	@echo "$(GREEN)[OK]\t$(BLUE)Creation de la librairie"
+	@echo "$(G)[OK]\t$(B)Creation de la librairie"
 	@ranlib $(NAME)
-	@echo "$(GREEN)[OK]\t$(BLUE)Creation de l'index pour $(NAME)\n"
+	@echo "$(G)[OK]\t$(B)Creation de l'index pour $(NAME)\n"
 	
 	@mkdir -p $(O_PATH) 
 	@mv $(O_FILE) ./$(O_PATH)/
 	@echo "$(CYAN)\t*****************************************"
 	@echo "$(CYAN)\t*\t Localisation des fichiers\t*"
 	@echo "$(CYAN)\t*****************************************\n"
-	@echo "\t$(WHITE)Fichiers C :\t\t$(CYAN)$(SRC_PATH)/"
-	@echo "\t$(WHITE)Fichiers objets :\t$(CYAN)$(O_PATH)/"
-	@$(CORREC)echo "\t$(WHITE)Fichiers mains :\t$(CYAN)$(MAIN_PATH)srcs/"
-	@$(CORREC)echo "\t$(WHITE)Fichiers executabes :\t$(CYAN)$(EXEC_PATH)/\n"
+	@echo "\t$(W)Fichiers C :\t\t$(CYAN)$(SRC_PATH)/"
+	@echo "\t$(W)Fichiers objets :\t$(CYAN)$(O_PATH)/"
+	@$(CORREC)echo "\t$(W)Fichiers mains :\t$(CYAN)$(MAIN_PATH)srcs/"
+	@$(CORREC)echo "\t$(W)Fichiers executabes :\t$(CYAN)$(EXEC_PATH)/\n"
 
 %.o: %.c
 	@$(CORREC)mkdir -p $(EXEC_PATH)
 	@$(COMPIL) -c $< -I $(INC_PATH) -o $@
-	@echo "$(GREEN)[OK]\t$(WHITE)Compilation en fichier objets :\t\t$(GREEN)$@"
+	@echo "$(G)[OK]\t$(W)Compilation en fichier objets :\t\t$(G)$@"
 	@$(CORREC)$(COMPIL) $(MAIN_PATH)$(<:.c=_main.c) $(NAME) -o $*
-	@$(CORREC)echo "$(YELLOW)[OK]\t$(WHITE)Compilation en fichier executable :\
-	\t$(YELLOW)$*\n"
+	@$(CORREC)echo "$(Y)[OK]\t$(W)Compilation en fichier executable :\
+	\t$(Y)$*\n"
 	@$(CORREC)mv $* ./$(EXEC_PATH)/
 
 help:
-	@echo "$(YELLOW)\n\t\t================ AIDE ================\n"
-	@echo "$(GREEN)make all\t$(WHITE)Compiler la libft"
-	@echo "$(GREEN)make clean\t$(WHITE)Effacer les fichier .o"
-	@echo "$(GREEN)make fclean\t$(WHITE)Effacer tous fichiers crees par le \
+	@echo "$(Y)\n\t\t================ AIDE ================\n"
+	@echo "$(G)make all\t$(W)Compiler la libft"
+	@echo "$(G)make clean\t$(W)Effacer les fichier .o"
+	@echo "$(G)make fclean\t$(W)Effacer tous fichiers crees par le \
 	makefile"
-	@echo "$(GREEN)make re\t\t$(WHITE)Effacer et recompiler"
-	@echo "$(GREEN)make norme\t$(WHITE)Verifier la norme\n\n"
-	@echo "$(MAGENTA)Mode Correction\n\n\t$(WHITE)Pour activer le mode \
+	@echo "$(G)make re\t\t$(W)Effacer et recompiler"
+	@echo "$(G)make norme\t$(W)Verifier la norme\n\n"
+	@echo "$(MAGENTA)Mode Correction\n\n\t$(W)Pour activer le mode \
 	correction suivre les instructions suivantes :\n\n \t\t- Faire un \
 	premier Make en mode normal\n\t\t- Editer le Makefile\n \
-	\t\t- Supprimer $(CYAN)\# $(WHITE)sur la variable $(RED)CORREC\n \
-	\t\t$(WHITE)- Ajouter $(CYAN)\# $(WHITE)sur la varibale $(RED)NO \
-	\n\n\t$(WHITE)Pour revenir en mode normal faire l'inverse\n"
+	\t\t- Supprimer $(CYAN)\# $(W)sur la variable $(R)CORREC\n \
+	\t\t$(W)- Ajouter $(CYAN)\# $(W)sur la varibale $(R)NO \
+	\n\n\t$(W)Pour revenir en mode normal faire l'inverse\n"
 
 norme:
 	@norminette $(SRC_PATH)/$(C_FILE)
@@ -137,12 +136,12 @@ verif: ../libft_unit_test/
 
 clean:
 	@rm -rf $(O_PATH) $(EXEC_PATH)
-	@echo "$(GREEN)[OK]\t$(RED) Suppression des fichiers objets"
+	@echo "$(G)[OK]\t$(R) Suppression des fichiers objets"
 
 fclean: clean
 	@$(NO)rm -f $(NAME)
 	@rm -rf $(O_PATH) $(EXEC_PATH)
-	@echo "$(GREEN)[OK]\t$(RED)Suppression des des fichiers cree par le \
+	@echo "$(G)[OK]\t$(R)Suppression des des fichiers cree par le \
 	Makefile\n"
 
 re: fclean all
