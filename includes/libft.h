@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 18:03:08 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/05 22:59:42 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/10/12 13:09:44 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int		ft_tolower(int c);
 
 char	*ft_strncpy(char *dest, char *src, size_t n);
 char	*ft_strncat(char *s1, const char *s2, size_t n);
-char	*ft_strnstr(const char *str, const char *to_find, size_t len);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strstr(const char *big, const char *little);
 char	*ft_strcpy(char *dst, const char *src);
 char	*ft_strcat(char *s1, const char *s2);
