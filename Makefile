@@ -125,4 +125,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all $(NAME) help norme verif clean flcean re
+.PHONY: all $(NAME) help norme verif brench clean flcean re
