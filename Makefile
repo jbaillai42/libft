@@ -6,7 +6,7 @@
 #    By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/10/23 14:22:14 by jobailla         ###   ########.fr       *#
+#*   Updated: 2016/10/23 19:39:28 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -64,7 +64,8 @@ C_FILE = ft_putchar.c \
 		ft_strclr.c \
 		ft_putendl.c \
 		ft_putendl_fd.c \
-		ft_strchr.c
+		ft_strrchr.c \
+		ft_memcpy.c
 O_FILE = $(SRC:.c=.o)
 EXEC_FILE = $(C_FILE:.)
 
