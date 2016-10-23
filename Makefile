@@ -6,7 +6,7 @@
 #    By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/10/18 23:01:52 by jobailla         ###   ########.fr       *#
+#*   Updated: 2016/10/23 14:22:14 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -59,7 +59,12 @@ C_FILE = ft_putchar.c \
 		ft_isxdigit.c \
 		ft_putchar_fd.c \
 		ft_putnbr_fd.c \
-		ft_putstr_fd.c
+		ft_putstr_fd.c \
+		ft_strlcat.c \
+		ft_strclr.c \
+		ft_putendl.c \
+		ft_putendl_fd.c \
+		ft_strchr.c
 O_FILE = $(SRC:.c=.o)
 EXEC_FILE = $(C_FILE:.)
 
@@ -132,7 +137,10 @@ norme:
 	@norminette $(SRC_PATH)/$(C_FILE)
 
 verif: ../libft_unit_test/
-	./verif.sh
+	./.sh/.verif.sh
+
+brench: verif
+	./.sh/.brench.sh
 
 clean:
 	@rm -rf $(O_PATH) $(EXEC_PATH)
