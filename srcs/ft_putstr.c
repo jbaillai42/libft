@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/08 17:54:53 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/12 11:25:53 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/04 00:10:44 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,5 @@
 
 void	ft_putstr(char *str)
 {
-	int i;
-
-	i = 0;
-	while (str[i] != '\0')
-	{
-		ft_putchar(str[i++]);
-	}
+	write(1, str, ft_strlen(str));
 }
