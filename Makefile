@@ -6,7 +6,7 @@
 #    By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/10/23 21:51:59 by jobailla         ###   ########.fr       *#
+#*   Updated: 2016/11/04 00:17:48 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,12 +29,12 @@ SRC = $(addprefix $(SRC_PATH)/,$(C_FILE))
 # FILES #
 C_FILE = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
 	ft_isblank.c ft_isdigit.c ft_isgraph.c ft_islower.c ft_isprint.c \
-	ft_ispunct.c ft_isspace.c ft_isupper.c ft_isxdigit.c ft_memcpy.c \
-	ft_memset.c ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c \
+	ft_ispunct.c ft_isspace.c ft_isupper.c ft_isxdigit.c  ft_memset.c \
+	ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c \
 	ft_putnbr.c ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c ft_strcat.c \
 	ft_strclr.c ft_strcmp.c ft_strcpy.c ft_strdup.c ft_strlcat.c \
 	ft_strlen.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnstr.c \
-	ft_strrchr.c ft_strstr.c ft_tolower.c ft_toupper.c
+	 ft_strstr.c ft_tolower.c ft_toupper.c
 
 O_FILE = $(SRC:.c=.o)
 EXEC_FILE = $(C_FILE:.)
