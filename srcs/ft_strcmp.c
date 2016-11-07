@@ -6,22 +6,18 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/10 12:01:46 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/12 11:33:30 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/07 16:26:59 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* Comparaison de deux chaînes. */
 
 #include "libft.h"
 
 int		ft_strcmp(const char *s1, const char *s2)
 {
-	int i;
-
-	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
+	while (*s1 && *s2 && *s1 == *s2)
 	{
-		i++;
+		s1++;
+		s2++;
 	}
-	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+	return ((unsigned char)*s1 - (unsigned char)*s2);
 }

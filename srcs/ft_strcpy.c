@@ -6,11 +6,9 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/09 11:29:02 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/23 21:37:01 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/07 13:19:36 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* Copier une chaîne. */
 
 #include "libft.h"
 
@@ -19,7 +17,7 @@ char	*ft_strcpy(char *dst, const char *src)
 	size_t i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (src[i])
 	{
 		dst[i] = src[i];
 		i++;

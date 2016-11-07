@@ -6,11 +6,9 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/01 00:02:06 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/12 11:28:58 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/06 14:27:24 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* Écrire des octets de valeur zéro dans un bloc d'octets */
 
 #include "libft.h"
 

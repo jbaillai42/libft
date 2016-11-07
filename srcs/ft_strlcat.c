@@ -6,11 +6,9 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/11 21:02:19 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/23 19:51:23 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/06 15:25:18 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* Copie et concatene une chaine */
 
 #include "libft.h"
 
@@ -31,5 +29,4 @@ size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t size)
 	if (i < size)
 		dst[i + j] = 0;
 	return (i + ft_strlen(src));
-
 }

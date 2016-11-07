@@ -6,15 +6,13 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/02 23:41:30 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/23 19:31:51 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/06 14:00:16 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Concaténer deux chaînes */
-
 #include "libft.h"
 
-char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
 	size_t	i;
 	int		len;

@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Calculer la longueur d'une chaîne de caractères */
-
 #include "libft.h"
 
 int		ft_strlen(const char *s)

@@ -6,16 +6,12 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/12 11:46:35 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/23 01:06:40 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/06 15:31:32 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* Prend en paramètre l’adresse d’une chaine de caractères qui doit être 
-	libérée avec free(3) et son pointeur mis à NULL. */
 
 #include "libft.h"
 
 void	ft_strdel(char **as)
 {
-
 }

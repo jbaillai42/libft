@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/29 00:16:17 by jobailla          #+#    #+#             */
-/*   Updated: 2016/09/29 00:54:30 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/06 15:19:16 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@ int		ft_tolower(int n)
 {
 	if (n >= 'A' && n <= 'Z')
 		n = n + 32;
-	return(n);
+	return (n);
 }

@@ -6,11 +6,9 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/08 18:06:40 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/04 17:25:12 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/06 14:30:16 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* Affiche l’entier n sur la sortie standard. */
 
 #include "libft.h"
 

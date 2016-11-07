@@ -6,11 +6,9 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/11 23:25:23 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/12 11:25:02 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/06 15:33:24 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* Ecrit le caractère c sur le descripteur de fichier fd. */
 
 #include "libft.h"
 

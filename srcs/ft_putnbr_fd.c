@@ -6,11 +6,9 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/11 23:28:31 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/12 11:27:05 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/06 14:30:22 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* Ecrit l’entier n sur le descripteur de fichier fd. */
 
 #include "libft.h"
 

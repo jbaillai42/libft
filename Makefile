@@ -18,23 +18,27 @@ CORREC = \#
 NO = 
 
 
-# PATHS #
-INC_PATH = includes
-SRC_PATH = srcs
-O_PATH = objets
-EXEC_PATH = exec
-MAIN_PATH = main_
-SRC = $(addprefix $(SRC_PATH)/,$(C_FILE))
+# DIRS #
+INC_DIR = includes
+SRC_DIR = srcs
+O_DIR = objets
+EXEC_DIR = exec
+MAIN_DIR = main_
+SRC = $(addprefix $(SRC_DIR)/,$(C_FILE))
 
 # FILES #
-C_FILE = ft_atoi.c ft_bzero.c ft_isalnum.c ft_isalpha.c ft_isascii.c \
-	ft_isblank.c ft_isdigit.c ft_isgraph.c ft_islower.c ft_isprint.c \
-	ft_ispunct.c ft_isspace.c ft_isupper.c ft_isxdigit.c  ft_memset.c \
-	ft_putchar.c ft_putchar_fd.c ft_putendl.c ft_putendl_fd.c \
-	ft_putnbr.c ft_putnbr_fd.c ft_putstr.c ft_putstr_fd.c ft_strcat.c \
-	ft_strclr.c ft_strcmp.c ft_strcpy.c ft_strdup.c ft_strlcat.c \
-	ft_strlen.c ft_strncat.c ft_strncmp.c ft_strncpy.c ft_strnstr.c \
-	 ft_strstr.c ft_tolower.c ft_toupper.c
+C_FILE = $(LIBC) $(FT) $(BONNUS)
+
+LIBC = ft_memset.c ft_bzero.c ft_strlen.c ft_strdup.c ft_strcpy.c \
+	   ft_strncpy.c ft_strcat.c ft_strncat.c ft_strlcat.c ft_strstr.c \
+	   ft_strnstr.c ft_strcmp.c ft_strncmp.c ft_atoi.c ft_isalpha.c \
+	   ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c ft_toupper.c \
+	   ft_tolower.c ft_memcpy.c ft_memccpy.c ft_memcmp.c
+
+FT = ft_strclr.c ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c \
+	 ft_putchar_fd.c ft_putstr_fd.c ft_putnbr_fd.c
+
+BONNUS = ft_islower.c ft_isupper.c ft_isblank.c
 
 O_FILE = $(SRC:.c=.o)
 EXEC_FILE = $(C_FILE:.)
@@ -70,24 +74,24 @@ $(NAME): $(O_FILE)
 	@ranlib $(NAME)
 	@echo "$(G)[OK]\t$(B)Creation de l'index pour $(NAME)\n"
 	
-	@mkdir -p $(O_PATH) 
-	@mv $(O_FILE) ./$(O_PATH)/
+	@mkdir -p $(O_DIR) 
+	@mv $(O_FILE) ./$(O_DIR)/
 	@echo "$(CYAN)\t*****************************************"
 	@echo "$(CYAN)\t*\t Localisation des fichiers\t*"
 	@echo "$(CYAN)\t*****************************************\n"
-	@echo "\t$(W)Fichiers C :\t\t$(CYAN)$(SRC_PATH)/"
-	@echo "\t$(W)Fichiers objets :\t$(CYAN)$(O_PATH)/"
-	@$(CORREC)echo "\t$(W)Fichiers mains :\t$(CYAN)$(MAIN_PATH)srcs/"
-	@$(CORREC)echo "\t$(W)Fichiers executabes :\t$(CYAN)$(EXEC_PATH)/\n"
+	@echo "\t$(W)Fichiers C :\t\t$(CYAN)$(SRC_DIR)/"
+	@echo "\t$(W)Fichiers objets :\t$(CYAN)$(O_DIR)/"
+	@$(CORREC)echo "\t$(W)Fichiers mains :\t$(CYAN)$(MAIN_DIR)srcs/"
+	@$(CORREC)echo "\t$(W)Fichiers executabes :\t$(CYAN)$(EXEC_DIR)/\n"
 
 %.o: %.c
-	@$(CORREC)mkdir -p $(EXEC_PATH)
-	@$(COMPIL) -c $< -I $(INC_PATH) -o $@
+	@$(CORREC)mkdir -p $(EXEC_DIR)
+	@$(COMPIL) -c $< -I $(INC_DIR) -o $@
 	@echo "$(G)[OK]\t$(W)Compilation en fichier objets :\t\t$(G)$@"
-	@$(CORREC)$(COMPIL) $(MAIN_PATH)$(<:.c=_main.c) $(NAME) -o $*
+	@$(CORREC)$(COMPIL) $(MAIN_DIR)$(<:.c=_main.c) $(NAME) -o $*
 	@$(CORREC)echo "$(Y)[OK]\t$(W)Compilation en fichier executable :\
 	\t$(Y)$*\n"
-	@$(CORREC)mv $* ./$(EXEC_PATH)/
+	@$(CORREC)mv $* ./$(EXEC_DIR)/
 
 help:
 	@echo "$(Y)\n\t\t================ AIDE ================\n"
@@ -105,21 +109,21 @@ help:
 	\n\n\t$(W)Pour revenir en mode normal faire l'inverse\n"
 
 norme:
-	@norminette $(SRC_PATH)/$(C_FILE)
+	./sh/norme.sh
 
 verif: ../libft_unit_test/
-	./.sh/.verif.sh
+	./sh/verif.sh
 
 brench: verif
-	./.sh/.brench.sh
+	./sh/brench.sh
 
 clean:
-	@rm -rf $(O_PATH) $(EXEC_PATH)
+	@rm -rf $(O_DIR) $(EXEC_DIR)
 	@echo "$(G)[OK]\t$(R) Suppression des fichiers objets"
 
 fclean: clean
 	@$(NO)rm -f $(NAME)
-	@rm -rf $(O_PATH) $(EXEC_PATH)
+	@rm -rf $(O_DIR) $(EXEC_DIR)
 	@echo "$(G)[OK]\t$(R)Suppression des des fichiers cree par le \
 	Makefile\n"
 

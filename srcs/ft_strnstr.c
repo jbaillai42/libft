@@ -6,11 +6,9 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/02 23:54:39 by jobailla          #+#    #+#             */
-/*   Updated: 2016/10/23 15:10:21 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/06 14:27:12 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-/* Rechercher une sous-chaîne. */
 
 #include "libft.h"
 
