@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 18:03:08 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/07 16:34:21 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/09 13:32:08 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,19 @@
 # include <ctype.h>
 # include <xlocale.h>
 
+# define R		"\033[0;31m"
+# define G		"\033[0;32m"
+# define B		"\033[1;34m"
+# define Y		"\033[0;33m"
+# define W		"\033[0;97m"
+# define CYAN	"\033[0;36m"
+# define MAGENTA "\033[0;35m2"
+
 void	*ft_memalloc(size_t size);
-void	*ft_memccpy(void *dst, const void *src, int c, size_t n);
-void	*ft_memcpy(void *dst, const void *src, size_t n);
+void	*ft_memccpy(void *dst, const void *src, int c, size_t len);
+void	*ft_memcpy(void *dst, const void *src, size_t len);
+void	*ft_memmove(void *dst, const void *src, size_t len);
+void	*ft_memchr(const void *src,int c, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	ft_memdel(void **ap);

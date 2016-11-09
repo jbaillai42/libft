@@ -1,31 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/08 16:46:55 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/08 16:47:07 by jobailla         ###   ########.fr       */
+/*   Created: 2016/11/08 12:06:15 by jobailla          #+#    #+#             */
+/*   Updated: 2016/11/08 16:43:32 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, char *src, size_t n)
+char	*ft_strrchr(const char *s, int c)
 {
-	size_t i;
+	int		len;
 
-	i = 0;
-	while (src[i] && (i < n))
+	len = ft_strlen(s) - 1;
+	if ((char)c == '\0')
+		return ((char *)s + len + 1);
+	else
 	{
-		dest[i] = src[i];
-		i++;
+		while (s[len] && s[len] != (char)c)
+		{
+			len--;
+		}
+		if (s[len] == (char)c)
+			return ((char *)s + len);
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	return (NULL);
 }

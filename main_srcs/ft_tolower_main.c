@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/29 02:09:06 by jobailla          #+#    #+#             */
-/*   Updated: 2016/09/29 02:09:55 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/09 13:21:42 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,11 @@ int		main(int argc, char **argv)
 	i = 1;
 	if (argc == 2)
 	{
-		ft_putstr("ft_tolower = ");
-		ft_putchar(ft_tolower(*argv[i]));
-		ft_putchar('\n');
-		ft_putstr("tolower = ");
-		printf("%c", tolower(*argv[i]));
+		ft_putstr(B"ft_tolower = ");
+		printf("%d\n", ft_tolower(*argv[i]));
+		ft_putstr(G"tolower = ");
+		printf("%d\n", tolower(*argv[i]));
 	}
 	else
-		ft_putstr("Erreur : entrez un seul agument.\n");
+		ft_putstr(R"Erreur : Entez un argument.\n");
 }

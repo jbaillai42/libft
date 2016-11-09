@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncpy.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/08 16:46:55 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/08 16:47:07 by jobailla         ###   ########.fr       */
+/*   Created: 2016/11/07 18:33:43 by jobailla          #+#    #+#             */
+/*   Updated: 2016/11/09 12:36:07 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strncpy(char *dest, char *src, size_t n)
+void	*ft_memmove(void *dst, const void *src, size_t len)
 {
-	size_t i;
+	char	*d;
+	char	*s;
 
-	i = 0;
-	while (src[i] && (i < n))
+	s = (char *)src;
+	d = (char *)dst;
+	if (dst < src)
+		ft_memcpy(d, s, len);
+	else
 	{
-		dest[i] = src[i];
-		i++;
+		while (len--)
+			d[len] = s[len];
 	}
-	while (i < n)
-	{
-		dest[i] = '\0';
-		i++;
-	}
-	return (dest);
+	return (dst);
 }
