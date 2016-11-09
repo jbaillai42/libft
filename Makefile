@@ -37,7 +37,8 @@ LIBC =		ft_memset.c		ft_bzero.c		ft_strlen.c		ft_strdup.c		\
 			ft_memmove.c	ft_strchr.c		ft_strrchr.c	ft_memchr.c		
 
 FT =		ft_strclr.c		ft_putchar.c	ft_putstr.c		ft_putendl.c	\
-			ft_putnbr.c		ft_putchar_fd.c	ft_putstr_fd.c	ft_putnbr_fd.c
+			ft_putnbr.c		ft_putchar_fd.c	ft_putstr_fd.c	ft_putnbr_fd.c	\
+			ft_memalloc.c	ft_memdel.c		ft_strdel.c		
 
 BONNUS =	ft_islower.c	ft_isupper.c	ft_isblank.c
 
@@ -88,7 +89,7 @@ $(NAME): $(O_FILE)
 %.o: %.c
 	@$(CORREC)mkdir -p $(EXEC_DIR)
 	@$(COMPIL) -c $< -I $(INC_DIR) -o $@
-	@echo "$(G)[OK]\t$(W)Compilation en fichier objets :\t\t$(G)$@"
+	@echo "$(G)[OK]\t$(W)Compilation en fichier objets :\t$(G)$@"
 	@$(CORREC)$(COMPIL) $(MAIN_DIR)$(<:.c=_main.c) $(NAME) -o $*
 	@$(CORREC)echo "$(Y)[OK]\t$(W)Compilation en fichier executable :\
 	\t$(Y)$*\n"
