@@ -6,7 +6,7 @@
 #    By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/11/04 00:17:48 by jobailla         ###   ########.fr       *#
+#*   Updated: 2016/11/10 22:29:05 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -90,7 +90,7 @@ $(NAME): $(O_FILE)
 %.o: %.c
 	@$(CORREC)mkdir -p $(EXEC_DIR)
 	@$(COMPIL) -c $< -I $(INC_DIR) -o $@
-	@echo "$(G)[OK]\t$(W)Compilation en fichier objets :\t$(G)$@"
+	@echo "$(G)[OK]\t$(B)$*" | sed 's/srcs\///g'
 	@$(CORREC)$(COMPIL) $(MAIN_DIR)$(<:.c=_main.c) $(NAME) -o $*
 	@$(CORREC)echo "$(Y)[OK]\t$(W)Compilation en fichier executable :\
 	\t$(Y)$*\n"
@@ -110,6 +110,9 @@ help:
 	\t\t- Supprimer $(CYAN)\# $(W)sur la variable $(R)CORREC\n \
 	\t\t$(W)- Ajouter $(CYAN)\# $(W)sur la varibale $(R)NO \
 	\n\n\t$(W)Pour revenir en mode normal faire l'inverse\n"
+
+list:
+	@echo $(C_FILE:.c=) | tr ' ' '\n'
 
 norme:
 	./sh/norme.sh
