@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 23:52:05 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/09 17:49:21 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/10 11:06:41 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,12 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	*mem;
+	char	*mem;
 
 	if (len == 0)
 		return (b);
-	mem = (unsigned char *)b;
-	while (len)
-	{
-		*mem = (unsigned char)c;
-		mem++;
-		len--;
-	}
+	mem = (char *)b;
+	while (len--)
+		*mem++ = (char)c;
 	return (b);
 }

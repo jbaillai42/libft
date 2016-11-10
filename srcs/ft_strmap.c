@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/12 11:54:05 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/06 15:26:41 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/10 12:56:36 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,7 @@
 
 char	*ft_strmap(char const *s, char (*f)(char))
 {
+	if (s)
+		while (*s)
+			f(s++);
 }
