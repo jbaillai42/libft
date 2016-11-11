@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/09 09:57:20 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/08 16:48:06 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/11 18:15:26 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int		ft_atoi(const char *str)
 {
-	unsigned int	ret;
-	int				sign;
+	int		ret;
+	int		sign;
 
 	ret = 0;
 	while (ft_isspace(*str))
@@ -23,7 +23,7 @@ int		ft_atoi(const char *str)
 	sign = (*str == '-' ? -1 : 1);
 	if (*str == '-' || *str == '+')
 		str++;
-	while (*str >= '0' && *str <= '9')
+	while (ft_isdigit(*str))
 	{
 		ret = ret * 10 + *str - '0';
 		str++;

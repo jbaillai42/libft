@@ -6,7 +6,7 @@
 #    By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/11/10 22:29:05 by jobailla         ###   ########.fr       *#
+#*   Updated: 2016/11/11 15:25:32 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ LIBC =		ft_memset.c		ft_bzero.c		ft_strlen.c		ft_strdup.c		\
 FT =		ft_strclr.c		ft_putchar.c	ft_putstr.c		ft_putendl.c	\
 			ft_putnbr.c		ft_putchar_fd.c	ft_putstr_fd.c	ft_putnbr_fd.c	\
 			ft_memalloc.c	ft_memdel.c		ft_strdel.c		ft_strnew.c		\
-			ft_striter.c	ft_striteri.c
+			ft_striter.c	ft_striteri.c	ft_strmap.c		
 
 BONNUS =	ft_islower.c	ft_isupper.c	ft_isblank.c
 
@@ -76,7 +76,6 @@ $(NAME): $(O_FILE)
 	@echo "$(G)[OK]\t$(B)Creation de la librairie"
 	@ranlib $(NAME)
 	@echo "$(G)[OK]\t$(B)Creation de l'index pour $(NAME)\n"
-	
 	@mkdir -p $(O_DIR) 
 	@mv $(O_FILE) ./$(O_DIR)/
 	@echo "$(CYAN)\t*****************************************"
@@ -111,6 +110,9 @@ help:
 	\t\t$(W)- Ajouter $(CYAN)\# $(W)sur la varibale $(R)NO \
 	\n\n\t$(W)Pour revenir en mode normal faire l'inverse\n"
 
+test:
+	@echo $(SRC)
+
 list:
 	@echo $(C_FILE:.c=) | tr ' ' '\n'
 
@@ -135,4 +137,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all $(NAME) help norme verif brench clean flcean re
+.PHONY: all $(NAME) help list norme verif brench clean flcean re
