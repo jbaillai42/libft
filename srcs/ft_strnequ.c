@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/12 11:57:45 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/06 15:24:53 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/12 17:50:11 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,7 @@
 
 int		ft_strnequ(char const *s1, char const *s2, size_t n)
 {
+	if (s1 && s2 && !(ft_strncmp(s1, s2, n)))
+		return (1);
+	return (0);
 }

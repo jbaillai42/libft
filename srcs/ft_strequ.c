@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/12 11:56:45 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/06 15:26:07 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/12 17:50:14 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,7 @@
 
 int		ft_strequ(char const *s1, char const *s2)
 {
+	if (s1 && s2 && !(ft_strcmp(s1, s2)))
+		return (1);
+	return (0);
 }

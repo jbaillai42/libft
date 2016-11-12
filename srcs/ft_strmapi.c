@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/12 11:55:24 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/06 15:26:37 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/12 19:43:36 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,4 +14,22 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
+	char	*str;
+	int		i;
+
+	i = 0;
+	if (!s || !f)
+		return (NULL);
+	if (!(str = (char *)ft_memalloc(sizeof(*str) * ft_strlen(s) + 1)))
+		return (NULL);
+	if (str)
+	{
+		while (s[i])
+		{
+			str[i] = f(i, s[i]);
+			i++;
+		}
+		str[i] = '\0';
+	}
+	return (str);
 }

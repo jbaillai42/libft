@@ -1,23 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_nbrlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/12 11:44:50 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/12 13:21:27 by jobailla         ###   ########.fr       */
+/*   Created: 2016/11/12 12:53:16 by jobailla          #+#    #+#             */
+/*   Updated: 2016/11/12 12:54:44 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+int		ft_nbrlen(int n)
 {
-	char	*str;
+	int i;
 
-	if (!(str = (char *)ft_memalloc(size + 1)))
-		return (NULL);
-	ft_bzero(str, size);
-	return (str);
+	i = 1;
+	while (n /= 10)
+		i++;
+	return (i);
 }
