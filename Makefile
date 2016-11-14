@@ -40,11 +40,12 @@ FT =		ft_strclr.c		ft_putchar.c	ft_putstr.c		ft_putendl.c	\
 			ft_putnbr.c		ft_putchar_fd.c	ft_putstr_fd.c	ft_putnbr_fd.c	\
 			ft_memalloc.c	ft_memdel.c		ft_strdel.c		ft_strnew.c		\
 			ft_striter.c	ft_striteri.c	ft_strmap.c		ft_itoa.c		\
-			ft_strmapi.c	ft_strequ.c		ft_strnequ.c	ft_strsub.c		
+			ft_strmapi.c	ft_strequ.c		ft_strnequ.c	ft_strsub.c		\
+			ft_strjoin.c	ft_strtrim.c
 
 BONNUS =	ft_islower.c	ft_isupper.c	ft_isblank.c
 
-PERSO =		ft_nbrlen.c
+PERSO =		ft_nbrlen.c		ft_isblank_and_newline.c
 
 O_FILE = $(SRC:.c=.o)
 EXEC_FILE = $(C_FILE:.)
@@ -92,8 +93,8 @@ $(NAME): $(O_FILE)
 %.o: %.c
 	@$(CORREC)mkdir -p $(EXEC_DIR)
 	@$(COMPIL) -c $< -I $(INC_DIR) -o $@
-	@echo "$(G)[OK]\t$(B)$*" | sed 's/srcs\///g'
 	@$(CORREC)$(COMPIL) $(MAIN_DIR)$(<:.c=_main.c) $(NAME) -o $*
+	@echo "$(G)[OK]\t$(B)$*" | sed 's/srcs\///g'
 	@$(CORREC)echo "$(Y)[OK]\t$(W)Compilation en fichier executable :\
 	\t$(Y)$*\n"
 	@$(CORREC)mv $* ./$(EXEC_DIR)/

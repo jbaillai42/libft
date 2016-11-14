@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/16 10:32:16 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/09 15:34:55 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/13 16:07:51 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strcat(char *s1, const char *s2)
 
 	i = 0;
 	len = ft_strlen(s1);
-	while (s2[i] != '\0')
+	while (s2[i])
 	{
 		s1[i + len] = s2[i];
 		i++;

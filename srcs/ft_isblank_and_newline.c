@@ -1,23 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_isblank_and_newline.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/15 10:15:19 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/14 13:40:15 by jobailla         ###   ########.fr       */
+/*   Created: 2016/11/14 14:32:24 by jobailla          #+#    #+#             */
+/*   Updated: 2016/11/14 14:37:58 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s1)
+int		ft_isblank_and_newline(int c)
 {
-	char	*s2;
-
-	s2 = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
-	if (s2 != NULL)
-		ft_strcpy(s2, s1);
-	return (s2);
+	if (ft_isblank(c) || c == '\n')
+		return (1);
+	return (0);
 }
