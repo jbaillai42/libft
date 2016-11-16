@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/12 12:05:06 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/14 14:06:57 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/16 03:34:27 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@ char	*ft_itoa(int n)
 	while (nbr /= 10)
 		str[--len] = nbr % 10 + '0';
 	if (n < 0)
-		*(str + 0) = '-';
+		str[0] = '-';
 	return (str);
 }
