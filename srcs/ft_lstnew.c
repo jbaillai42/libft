@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_word.c                                    :+:      :+:    :+:   */
+/*   ft_lstnew.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/14 15:03:10 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/17 12:36:38 by jobailla         ###   ########.fr       */
+/*   Created: 2016/11/17 15:05:15 by jobailla          #+#    #+#             */
+/*   Updated: 2016/11/17 17:49:15 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_count_word(char const *s, int c)
+t_list		*ft_lstnew(void const *content, size_t content_size)
 {
-	int nb_word;
+	t_list	*new;
+	void	*tmp;
 
-	nb_word = 0;
-	while (*s)
+	if (!(new = ft_memalloc(sizeof(content_size)))
+	|| (!(tmp = ft_memalloc(sizeof(content)))))
+		return (NULL);
+	new->content = NULL;
+	new->next = NULL;
+	new->content_size = 0;
+	if (content)
 	{
-		if (*s != c && (*(s + 1) == c || *(s + 1) == '\0'))
-			nb_word++;
-		s++;
+		ft_memcpy(new, content, content_size);
+		new->content = tmp;
+		new->content_size = content_size;
+		new->content_size = 0;
 	}
-	return (nb_word);
+	return (new);
 }

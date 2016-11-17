@@ -41,9 +41,9 @@ FT =		ft_strclr.c		ft_putchar.c	ft_putstr.c		ft_putendl.c	\
 			ft_memalloc.c	ft_memdel.c		ft_strdel.c		ft_strnew.c		\
 			ft_striter.c	ft_striteri.c	ft_strmap.c		ft_itoa.c		\
 			ft_strmapi.c	ft_strequ.c		ft_strnequ.c	ft_strsub.c		\
-			ft_strjoin.c	ft_strtrim.c
+			ft_strjoin.c	ft_strtrim.c	ft_putendl_fd.c
 
-BONNUS =	ft_islower.c	ft_isupper.c	ft_isblank.c
+BONNUS =	ft_islower.c	ft_isupper.c	ft_isblank.c	ft_lstnew.c
 
 PERSO =		ft_nbrlen.c		ft_isblank_and_newline.c
 

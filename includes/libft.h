@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 18:03:08 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/14 16:25:23 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/17 17:54:16 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,25 @@
 # define CYAN	"\033[0;36m"
 # define MAGENTA "\033[0;35m2"
 
+typedef struct		s_list
+{
+	void			*content;
+	size_t			content_size;
+	struct s_list	*next;
+}					t_list;
+
+t_list	*ft_lstnew(void const *content, size_t content_size);
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+void	ft_lstdelone(t_list **alst, void (*del)(void *, size_t));
+void	ft_lstdel(t_list **alst, void (*del)(void*, size_t));
+void	ft_lstadd(t_list **alst, t_list *new);
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem));
+
 void	*ft_memalloc(size_t size);
 void	*ft_memccpy(void *dst, const void *src, int c, size_t len);
 void	*ft_memcpy(void *dst, const void *src, size_t len);
 void	*ft_memmove(void *dst, const void *src, size_t len);
-void	*ft_memchr(const void *src,int c, size_t len);
+void	*ft_memchr(const void *src, int c, size_t len);
 void	*ft_memset(void *b, int c, size_t len);
 void	ft_bzero(void *s, size_t n);
 void	ft_memdel(void **ap);
@@ -64,14 +78,15 @@ int		ft_isxdigit(int c);
 int		ft_isblank_and_newline(int c);
 int		ft_strcmp(const char *s1, const char *s2);
 int		ft_strequ(char const *s1, char const *s2);
-int		ft_strlen(const char *s);
-int		ft_nbrlen(int n);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
 int		ft_tolower(int c);
 int		ft_toupper(int c);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
-int		ft_count_word(char *s);
+int		ft_count_word(char const *s, int c);
+
+size_t	ft_strlen(const char *s);
+size_t	ft_nbrlen(int n);
 
 char	**ft_strsplit(char const *s, char c);
 char	*ft_itoa(int n);
