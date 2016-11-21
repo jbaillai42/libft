@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/12 12:03:27 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/17 12:37:16 by jobailla         ###   ########.fr       */
+/*   Updated: 2016/11/20 16:37:41 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,9 @@ char	**ft_strsplit(char const *s, char c)
 
 	j = 0;
 	i = 0;
-	if (!s || !(tab = (char **)ft_memalloc(sizeof(char *)
+	if (!(s))
+		return (NULL);
+	if (!(tab = (char **)ft_memalloc(sizeof(char *)
 	* (ft_count_word(s, c) + 1))))
 		return (NULL);
 	while (s[j] && i < ft_count_word(s, c))

@@ -1,29 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/17 15:05:15 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/20 14:49:11 by jobailla         ###   ########.fr       */
+/*   Created: 2016/11/19 15:46:00 by jobailla          #+#    #+#             */
+/*   Updated: 2016/11/20 14:05:40 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list		*ft_lstnew(void const *content, size_t content_size)
+void	ft_lstadd(t_list **alst, t_list *new)
 {
-	t_list	*new;
-
-	if (!(new = (t_list*)ft_memalloc(sizeof(t_list))))
-		return (NULL);
-	if (content)
-	{
-		new->content = (void*)ft_memalloc(content_size);
-		ft_memcpy(new->content, content, content_size);
-		new->content_size = content_size;
-	}
-	new->next = NULL;
-	return (new);
+	new->next = *alst;
+	*alst = new;
 }
