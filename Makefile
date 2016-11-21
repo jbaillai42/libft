@@ -13,11 +13,6 @@
 NAME = libft.a
 COMPIL = clang -Wall -Wextra -Werror
 
-# CORRECTION MODE #
-CORREC = \#
-NO = 
-
-
 # DIRS #
 INC_DIR = includes
 SRC_DIR = srcs
@@ -41,11 +36,14 @@ FT =		ft_strclr.c		ft_putchar.c	ft_putstr.c		ft_putendl.c	\
 			ft_memalloc.c	ft_memdel.c		ft_strdel.c		ft_strnew.c		\
 			ft_striter.c	ft_striteri.c	ft_strmap.c		ft_itoa.c		\
 			ft_strmapi.c	ft_strequ.c		ft_strnequ.c	ft_strsub.c		\
-			ft_strjoin.c	ft_strtrim.c	ft_putendl_fd.c
+			ft_strjoin.c	ft_strtrim.c	ft_putendl_fd.c	ft_strsplit.c
 
-BONNUS =	ft_islower.c	ft_isupper.c	ft_isblank.c	ft_lstnew.c
+BONNUS =	ft_islower.c	ft_isupper.c	ft_isblank.c	ft_lstnew.c		\
+			ft_lstdelone.c	ft_lstdel.c		ft_lstadd.c		ft_lstiter.c	\
+			ft_lstmap.c
 
-PERSO =		ft_nbrlen.c		ft_isblank_and_newline.c
+PERSO =		ft_nbrlen.c		ft_isblank_and_newline.c	ft_isspace.c		\
+			ft_count_word.c
 
 O_FILE = $(SRC:.c=.o)
 EXEC_FILE = $(C_FILE:.)
@@ -72,9 +70,6 @@ $(NAME): $(O_FILE)
 	@echo	"   $(R)NOTE: $(W)Pour afficher la liste des commandes : \
 	$(G)make help\n"
 	
-	@$(CORREC)echo "$(MAGENTA)\t*****************************************"
-	@$(CORREC)echo "$(MAGENTA)\t*\t Mode Correction Actif\t\t*"
-	@$(CORREC)echo "$(MAGENTA)\t*****************************************\n"
 	@echo "$(G)[OK]\t$(B)Compilation des fichiers objets"
 	@ar rc $(NAME) $(O_FILE)
 	@echo "$(G)[OK]\t$(B)Creation de la librairie"
@@ -87,17 +82,10 @@ $(NAME): $(O_FILE)
 	@echo "$(CYAN)\t*****************************************\n"
 	@echo "\t$(W)Fichiers C :\t\t$(CYAN)$(SRC_DIR)/"
 	@echo "\t$(W)Fichiers objets :\t$(CYAN)$(O_DIR)/"
-	@$(CORREC)echo "\t$(W)Fichiers mains :\t$(CYAN)$(MAIN_DIR)srcs/"
-	@$(CORREC)echo "\t$(W)Fichiers executabes :\t$(CYAN)$(EXEC_DIR)/\n"
 
 %.o: %.c
-	@$(CORREC)mkdir -p $(EXEC_DIR)
 	@$(COMPIL) -c $< -I $(INC_DIR) -o $@
-	@$(CORREC)$(COMPIL) $(MAIN_DIR)$(<:.c=_main.c) $(NAME) -o $*
 	@echo "$(G)[OK]\t$(B)$*" | sed 's/srcs\///g'
-	@$(CORREC)echo "$(Y)[OK]\t$(W)Compilation en fichier executable :\
-	\t$(Y)$*\n"
-	@$(CORREC)mv $* ./$(EXEC_DIR)/
 
 help:
 	@echo "$(Y)\n\t\t================ AIDE ================\n"
@@ -106,13 +94,10 @@ help:
 	@echo "$(G)make fclean\t$(W)Effacer tous fichiers crees par le \
 	makefile"
 	@echo "$(G)make re\t\t$(W)Effacer et recompiler"
-	@echo "$(G)make norme\t$(W)Verifier la norme\n\n"
-	@echo "$(MAGENTA)Mode Correction\n\n\t$(W)Pour activer le mode \
-	correction suivre les instructions suivantes :\n\n \t\t- Faire un \
-	premier Make en mode normal\n\t\t- Editer le Makefile\n \
-	\t\t- Supprimer $(CYAN)\# $(W)sur la variable $(R)CORREC\n \
-	\t\t$(W)- Ajouter $(CYAN)\# $(W)sur la varibale $(R)NO \
-	\n\n\t$(W)Pour revenir en mode normal faire l'inverse\n"
+	@echo "$(G)make list\t$(W)Affiche la liste des fonctions"
+	@echo "$(G)make norme\t$(W)Verifier la norme"
+	@echo "$(G)make verif\t$(W)Verifier les fonction de la libft via unit-test"
+	@echo "$(G)make brench\t$(W)Tester la vitesse de fonctions de la libc\n\n"
 
 list:
 	@echo $(C_FILE:.c=) | tr ' ' '\n'
@@ -131,7 +116,7 @@ clean:
 	@echo "$(G)[OK]\t$(R) Suppression des fichiers objets"
 
 fclean: clean
-	@$(NO)rm -f $(NAME)
+	@rm -f $(NAME)
 	@rm -rf $(O_DIR) $(EXEC_DIR)
 	@echo "$(G)[OK]\t$(R)Suppression des des fichiers cree par le \
 	Makefile\n"
