@@ -6,7 +6,7 @@
 #    By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/08/23 11:29:22 by jobailla          #+#    #+#              #
-#*   Updated: 2016/11/11 21:54:56 by jobailla         ###   ########.fr       *#
+#*   Updated: 2016/11/23 17:57:57 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,7 +68,7 @@ $(NAME): $(O_FILE)
 	@echo "\t\t$(Y)|______|_|_.__/|_|  \__(_)_| |_|"
 	@echo "\t\t$(Y)\t\t\t\tBy Jobailla\n"
 	@echo	"   $(R)NOTE: $(W)Pour afficher la liste des commandes : \
-	$(G)make help\n"
+	$(G)\033[5mmake help\033[0m\n"
 	
 	@echo "$(G)[OK]\t$(B)Compilation des fichiers objets"
 	@ar rc $(NAME) $(O_FILE)
