@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** convertit la chaîne caractère pointée par str en type int.
+*/
+
 #include "libft.h"
 
 int		ft_atoi(const char *str)

@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** compare les n premiers octets des zones mémoire s1 et s2. Elle renvoie un 
+** entier inférieur, égal, ou supérieur à zéro, si s1 est respectivement 
+** inférieure, égale ou supérieur à s2. 
+*/
+
 #include "libft.h"
 
 int		ft_memcmp(const void *s1, const void *s2, size_t n)

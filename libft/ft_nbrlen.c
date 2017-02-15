@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* 
+** Compte le nom de cararètre dans un int.
+*/
+
 #include "libft.h"
 
 size_t	ft_nbrlen(int n)

@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Assigne la valeur ’\0’ à tous les caractères de la chaine passée en paramètre
+*/
+
 #include "libft.h"
 
 void	ft_strclr(char *s)

@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Parcourt la liste lst en appliquant à chaque maillon la fonction f.
+*/
+
 #include "libft.h"
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))

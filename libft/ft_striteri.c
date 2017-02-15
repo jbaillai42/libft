@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Applique la fonction f à chaque caractère de la chaine de caractères passée
+** en paramètre en précisant son index en premier argument. Chaque caractère est
+** passé par adresse à la fonction f afin de pouvoir être modifié si nécéssaire.
+*/
+
 #include "libft.h"
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))

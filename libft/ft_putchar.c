@@ -6,13 +6,18 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/03 17:46:45 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/07 16:40:31 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/02/03 14:36:27 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Affiche le caractère c sur la sortie standard.
+*/
+
 #include "libft.h"
 
-void	ft_putchar(char c)
+int		ft_putchar(char c)
 {
 	write(1, &c, 1);
+	return (1);
 }

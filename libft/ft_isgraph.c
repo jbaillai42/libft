@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Vérifie s'il s'agit d'un caractère imprimable, à l'exception de l'espace.
+*/
+
 #include "libft.h"
 
 int		ft_isgraph(int c)

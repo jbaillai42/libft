@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Convertit la lettre c en majuscule si c'est possible.
+*/
+
 #include "libft.h"
 
 int		ft_toupper(int c)

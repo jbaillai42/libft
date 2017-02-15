@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Prend en paramètre l’adresse d’une chaine de caractères qui doit être libérée
+** avec free(3) et son pointeur mis à NULL.
+*/
+
 #include "libft.h"
 
 void	ft_strdel(char **as)

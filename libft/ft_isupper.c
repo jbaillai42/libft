@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Vérifie si l'on a une lettre majuscule.
+*/
+
 #include "libft.h"
 
 int		ft_isupper(int c)

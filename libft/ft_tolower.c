@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* 
+** Convertit la lettre c en minuscule si c'est possible.
+*/
+
 #include "libft.h"
 
 int		ft_tolower(int c)

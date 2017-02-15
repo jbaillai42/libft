@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Vérifie si l'on a un caractère minuscule.
+*/
+
 #include "libft.h"
 
 int		ft_islower(int c)

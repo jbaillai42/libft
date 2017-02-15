@@ -6,9 +6,14 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 23:52:05 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/15 20:36:58 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/01/19 02:11:20 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** emplit les len premiers octets de la zone mémoire pointée par s avec 
+** l'octet c.
+*/
 
 #include "libft.h"
 

@@ -10,6 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** ajoute la chaîne s2 à la fin de la chaîne dest en écrasant le caractère nul
+** (« \0 ») à la fin de s1, puis en ajoutant un nouveau caractère nul final.
+** Les chaînes ne doivent pas se chevaucher, et la chaîne dest doit être assez 
+** grande pour accueillir le résultat.
+*/
+
 #include "libft.h"
 
 char	*ft_strncat(char *s1, const char *s2, size_t n)

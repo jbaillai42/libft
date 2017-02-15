@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Cherche la première occurrence de la sous-chaîne aiguille au sein de la 
+** chaîne meule_de_foin. en fonction de len.
+** Les caractères « \0 » de fin ne sont pas comparés.
+*/
+
 #include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)

@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** renvoie un pointeur sur une nouvelle chaîne de caractères qui est dupliquée 
+** depuis s.
+*/
+
 #include "libft.h"
 
 char	*ft_strdup(const char *s1)

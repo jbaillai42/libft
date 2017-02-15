@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Vérifie s'il s'agit d'un caractère imprimable, qui ne soit ni un espace, 
+** ni un caractère alphanumérique.
+*/
+
 #include "libft.h"
 
 int		ft_ispunct(int c)

@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Vérifie s'il s'agit d'un chiffre hexadécimal,
+*/
+
 #include "libft.h"
 
 int		ft_isxdigit(int c)

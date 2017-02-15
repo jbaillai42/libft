@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Cherche la première occurrence de la sous-chaîne aiguille au sein de la 
+** chaîne meule_de_foin. Les caractères « \0 » de fin ne sont pas comparés.
+*/
+
 #include "libft.h"
 
 char	*ft_strstr(const char *big, const char *little)

@@ -6,7 +6,7 @@
 #    By: jobailla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/23 19:27:01 by jobailla          #+#    #+#              #
-#    Updated: 2017/01/09 22:29:28 by jobailla         ###   ########.fr        #
+#    Updated: 2017/01/16 18:26:10 by jobailla         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,7 +21,7 @@ SHELL 			:= /bin/bash
 INCLUDES 		:= -I$(INCS)
 
 # Search source files
-C_FILES 		:= $(shell find $(SRCS) -type f)
+C_FILES 		:= $(shell find $(SRCS) -type f | grep "\.c")
 C_DIRS			:= $(shell find $(SRCS) -type d)
 C_FLAGS			+= -Wall -Wextra -Werror -MMD -g -O2 -ggdb
 
@@ -58,7 +58,7 @@ PRINT_GREEN		= printf " [$(GREEN_G)%s$(NRM)$(GREEN_G)\t%3s%%\t-->>\t$(GREEN_G)%-
 
 
 all:
-	@make -j $(NAME)
+	make -j $(NAME)
 
 $(NAME): $(O_FILES)
 	$(PRINT_GREEN) $(SRCS) && echo || exit;

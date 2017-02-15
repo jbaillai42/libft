@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Ecrit l’entier n sur le descripteur de fichier fd.
+*/
+
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)

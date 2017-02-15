@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Applique la fonction f à chaque caractère de la chaine de caractères passée 
+** en paramètre pour créer une nouvelle chaine “fraiche” (avec malloc(3)) 
+** résultant des applications successives de f.
+*/
+
 #include "libft.h"
 
 char	*ft_strmap(char const *s, char (*f)(char))

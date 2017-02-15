@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** alcule la longueur de la chaîne de caractères s, sans compter l'octet nul 
+** « \0 » final.  
+*/
+
 #include "libft.h"
 
 size_t		ft_strlen(const char *s)

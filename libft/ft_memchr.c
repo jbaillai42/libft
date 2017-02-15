@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** examine les len premiers octets de la zone mémoire pointée par src à 
+la recherche du caractère c. Le premier octet correspondant à c 
+** (interprété comme un unsigned char) arrête l'opération.
+*/
+
 #include "libft.h"
 
 void	*ft_memchr(const void *src, int c, size_t len)

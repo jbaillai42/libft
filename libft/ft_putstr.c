@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Affiche la chaine s sur la sortie standard.
+*/
+
 #include "libft.h"
 
 void	ft_putstr(char *str)

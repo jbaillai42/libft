@@ -6,9 +6,14 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 11:28:27 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/14 14:52:06 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/01/03 13:38:16 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Renvoie un pointeur sur la première occurrence du caractère c dans 
+** la chaîne s.
+*/
 
 #include "libft.h"
 

@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** compare les deux chaînes s1 et s2. Elle renvoie un entier négatif, nul, 
+** ou positif, si s1 est respectivement inférieure, égale ou supérieure à s2.
+*/
+
 #include "libft.h"
 
 int		ft_strcmp(const char *s1, const char *s2)

@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** copie n octets depuis la zone mémoire src vers la zone mémoire dest. 
+** Les deux zones ne doivent pas se chevaucher.
+*/
+
 #include "libft.h"
 
 void	*ft_memcpy(void *dst, const void *src, size_t len)

@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Vérifie si l'on a un caractère blanc, d'espacement.
+*/
+
 #include "libft.h"
 
 int		ft_isspace(int c)

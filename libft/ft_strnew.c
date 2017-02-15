@@ -6,9 +6,15 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/12 11:44:50 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/15 18:13:05 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/01/19 23:20:31 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+** Alloue (avec malloc(3)) et retourne une chaine de caractère “fraiche” 
+** terminée par un ’\0’. Chaque caractère de la chaine est initialisé à ’\0’.
+** Si l’allocation echoue, la fonction renvoie NULL.
+*/
 
 #include "libft.h"
 

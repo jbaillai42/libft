@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* 
+** Vérifie si c est un unsigned char sur 7 bits, entrant dans le jeu de 
+** caractères ASCII.
+*/
+
 #include "libft.h"
 
 int		ft_isascii(int c)

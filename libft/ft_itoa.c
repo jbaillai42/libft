@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Convertit le début de la chaîne pointée par nptr en entier de type int
+*/
+
 #include "libft.h"
 
 char	*ft_itoa(int n)

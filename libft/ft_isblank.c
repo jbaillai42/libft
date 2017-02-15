@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** vérifie si le caractère est blanc, c'est-à-dire une espace ou une tabulation.
+*/
+
 #include "libft.h"
 
 int		ft_isblank(int c)

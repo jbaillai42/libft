@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Copie la chaîne pointée par src (y compris l'octet nul « \0 » final) dans la 
+** chaîne pointée par dest. Les deux chaînes ne doivent pas se chevaucher. 
+** La chaîne dest doit être assez grande pour accueillir la copie.
+*/
+
 #include "libft.h"
 
 char	*ft_strcpy(char *dst, const char *src)

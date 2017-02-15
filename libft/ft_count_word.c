@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* 
+** Compte le nombre de mots dans la chaine de caractère s en fonction 
+** du délimiteur c.
+*/
+
 #include "libft.h"
 
 int		ft_count_word(char const *s, int c)

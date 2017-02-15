@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Vérifie si l'on a un caractère alphabétique.
+*/
+
 #include "libft.h"
 
 int		ft_isalpha(int c)

@@ -10,6 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Vérifie s'il s'agit d'un caractère imprimable, y compris l'espace.
+*/
+
 #include "libft.h"
 
 int		ft_isprint(int c)

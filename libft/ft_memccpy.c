@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Copie au plus len octets de la zone mémoire src vers 
+** la zone mémoire dest, s'arrêtant dès qu'elle rencontre le caractère c.  
+*/
+
 #include "libft.h"
 
 void	*ft_memccpy(void *dst, const void *src, int c, size_t len)
@@ -23,11 +28,9 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t len)
 	ch = (unsigned char)c;
 	while (len--)
 	{
-		*d = *s;
+		*d++ = *s++;
 		if (*s == ch)
 			return ((void *)d + 1);
-		s++;
-		d++;
 	}
 	return (NULL);
 }

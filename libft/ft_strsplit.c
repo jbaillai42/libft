@@ -10,6 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Alloue (avec malloc(3)) et retourne un tableau de chaines de caractères 
+** “fraiches” (toutes terminées par un ’\0’, le tableau également donc) résultant 
+** de la découpe de s selon le caractère c. Si l’allocation echoue,
+** la fonction retourne NULL. 
+*/
+
 #include "libft.h"
 
 char	**ft_strsplit(char const *s, char c)

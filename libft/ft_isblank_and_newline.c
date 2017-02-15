@@ -10,6 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/*
+** Renvoi une valeur positive si c est une espace, une tabulation ou un 
+** retour a la ligne.
+*/
+
 #include "libft.h"
 
 int		ft_isblank_and_newline(int c)

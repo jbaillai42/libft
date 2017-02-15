@@ -10,6 +10,12 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+/* ajoute la chaîne src à la fin de la haîne dest en écrasant le caractère `\0'
+** a la fin de dest, puis  en  ajoutant un nouveau caractère `\0' final.
+** Les chaînes ne doivent pas se  chevaucher,  et  la  chaîne dest doit être 
+** assez grande pour accueillir le resultat.
+*/
+
 #include "libft.h"
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
