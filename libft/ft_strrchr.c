@@ -6,12 +6,12 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 12:06:15 by jobailla          #+#    #+#             */
-/*   Updated: 2017/01/25 05:28:12 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/02/16 13:08:42 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** renvoie un pointeur sur la dernière occurrence du caractère c dans 
+** renvoie un pointeur sur la dernière occurrence du caractère c dans
 ** la chaîne s.
 */
 

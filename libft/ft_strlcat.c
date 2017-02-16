@@ -6,13 +6,14 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/11 21:02:19 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/20 14:40:03 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/02/16 12:20:01 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* ajoute la chaîne src à la fin de la haîne dest en écrasant le caractère `\0'
-** a la fin de dest, puis  en  ajoutant un nouveau caractère `\0' final.
-** Les chaînes ne doivent pas se  chevaucher,  et  la  chaîne dest doit être 
+/*
+** ajoute la chaîne src à la fin de la haîne dest en écrasant le caractère `\0'
+** a la fin de dest, puis  en  ajoutant un nouveau caractère `\0' final
+** Les chaînes ne doivent pas se  chevaucher,  et  la  chaîne dest doit être
 ** assez grande pour accueillir le resultat.
 */
 

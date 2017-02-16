@@ -6,13 +6,13 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/10 12:01:46 by jobailla          #+#    #+#             */
-/*   Updated: 2016/12/23 18:54:03 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/02/16 12:20:39 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** compare les deux chaînes s1 et s2. Elle renvoie un entier négatif, nul, 
-** ou positif, si s1 est respectivement inférieure, égale ou supérieure à s2.
+** compare les deux chaînes s1 et s2. Elle renvoie un entier négatif, nul,
+** ou positif, si s1 est respectivement inférieure, égale ou supérieure à s2
 */
 
 #include "libft.h"

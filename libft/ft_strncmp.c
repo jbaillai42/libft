@@ -6,13 +6,13 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/10 14:37:08 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/15 18:56:00 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/02/16 13:07:52 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Compare les n caractère des chaînes s1 et s2. Elle renvoie un entier négatif,
-** nul, ou positif, si s1 est respectivement inférieure, égale ou supérieure 
+** Compare les n caractère des chaînes s1 et s2. Elle renvoie un entier négatif
+** nul, ou positif, si s1 est respectivement inférieure, égale ou supérieure
 ** à s2.
 */
 

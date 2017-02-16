@@ -6,14 +6,14 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/19 17:00:36 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/19 18:54:59 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/02/16 12:58:01 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Parcourt la liste lst en appliquant à chaque maillon la fonction f et crée une 
-** nouvelle liste “fraiche” avec malloc(3) ré-sultant des applications successives.
-** Si une allocation échoue, la fonction renvoie NULL.
+** Parcourt la liste lst en appliquant à chaque maillon la fonction f et crée
+** une nouvelle liste “fraiche” avec malloc(3) ré-sultant des applications
+** successives Si une allocation échoue, la fonction renvoie NULL.
 */
 
 #include "libft.h"

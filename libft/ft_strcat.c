@@ -6,14 +6,14 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/16 10:32:16 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/13 16:07:51 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/02/16 13:06:52 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** Ajoute la chaîne s2 à la fin de la chaîne s1 en écrasant le caractère nul
-** (« \0 ») à la fin de s1, puis en ajoutant un nouveau caractère nul final. 
-** Les chaînes ne doivent pas se chevaucher, et la chaîne dest s1 être assez 
+** (« \0 ») à la fin de s1, puis en ajoutant un nouveau caractère nul final.
+** Les chaînes ne doivent pas se chevaucher, et la chaîne dest s1 être assez
 ** grande pour accueillir le résultat.
 */
 

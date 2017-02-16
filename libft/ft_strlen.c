@@ -6,13 +6,13 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/06 20:55:47 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/16 01:39:33 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/02/16 13:04:56 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** alcule la longueur de la chaîne de caractères s, sans compter l'octet nul 
-** « \0 » final.  
+** alcule la longueur de la chaîne de caractères s, sans compter l'octet nul
+** « \0 » final.
 */
 
 #include "libft.h"

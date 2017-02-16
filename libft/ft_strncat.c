@@ -6,14 +6,14 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/02 23:41:30 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/06 14:00:16 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/02/16 13:07:14 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
 ** ajoute la chaîne s2 à la fin de la chaîne dest en écrasant le caractère nul
 ** (« \0 ») à la fin de s1, puis en ajoutant un nouveau caractère nul final.
-** Les chaînes ne doivent pas se chevaucher, et la chaîne dest doit être assez 
+** Les chaînes ne doivent pas se chevaucher, et la chaîne dest doit être assez
 ** grande pour accueillir le résultat.
 */
 

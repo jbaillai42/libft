@@ -6,12 +6,12 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/29 00:50:37 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/14 14:56:29 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/02/16 12:57:05 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* 
-** Vérifie si c est un unsigned char sur 7 bits, entrant dans le jeu de 
+/*
+** Vérifie si c est un unsigned char sur 7 bits, entrant dans le jeu de
 ** caractères ASCII.
 */
 

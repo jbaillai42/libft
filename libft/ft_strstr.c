@@ -6,12 +6,12 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/09 21:58:20 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/16 04:20:47 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/02/16 13:09:20 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Cherche la première occurrence de la sous-chaîne aiguille au sein de la 
+** Cherche la première occurrence de la sous-chaîne aiguille au sein de la
 ** chaîne meule_de_foin. Les caractères « \0 » de fin ne sont pas comparés.
 */
 

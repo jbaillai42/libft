@@ -6,12 +6,12 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/30 01:51:37 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/06 15:46:30 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/02/16 12:53:33 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Vérifie s'il s'agit d'un caractère imprimable, qui ne soit ni un espace, 
+** Vérifie s'il s'agit d'un caractère imprimable, qui ne soit ni un espace,
 ** ni un caractère alphanumérique.
 */
 

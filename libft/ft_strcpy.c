@@ -6,13 +6,13 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/09 11:29:02 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/13 15:45:51 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/02/16 13:03:56 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Copie la chaîne pointée par src (y compris l'octet nul « \0 » final) dans la 
-** chaîne pointée par dest. Les deux chaînes ne doivent pas se chevaucher. 
+** Copie la chaîne pointée par src (y compris l'octet nul « \0 » final) dans la
+** chaîne pointée par dest. Les deux chaînes ne doivent pas se chevaucher.
 ** La chaîne dest doit être assez grande pour accueillir la copie.
 */
 

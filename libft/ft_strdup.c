@@ -6,12 +6,12 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/15 10:15:19 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/14 13:40:15 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/02/16 13:04:07 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** renvoie un pointeur sur une nouvelle chaîne de caractères qui est dupliquée 
+** renvoie un pointeur sur une nouvelle chaîne de caractères qui est dupliquée
 ** depuis s.
 */
 

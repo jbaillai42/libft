@@ -6,15 +6,15 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/12 12:03:27 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/20 16:37:41 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/02/16 13:09:33 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Alloue (avec malloc(3)) et retourne un tableau de chaines de caractères 
-** “fraiches” (toutes terminées par un ’\0’, le tableau également donc) résultant 
-** de la découpe de s selon le caractère c. Si l’allocation echoue,
-** la fonction retourne NULL. 
+** Alloue (avec malloc(3)) et retourne un tableau de chaines de caractères
+** “fraiches” (toutes terminées par un ’\0’, le tableau également donc)
+** résultant de la découpe de s selon le caractère c. Si l’allocation echoue,
+** la fonction retourne NULL.
 */
 
 #include "libft.h"

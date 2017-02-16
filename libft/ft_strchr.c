@@ -6,12 +6,12 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 11:28:27 by jobailla          #+#    #+#             */
-/*   Updated: 2017/01/03 13:38:16 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/02/16 13:03:37 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-** Renvoie un pointeur sur la première occurrence du caractère c dans 
+** Renvoie un pointeur sur la première occurrence du caractère c dans
 ** la chaîne s.
 */
 
