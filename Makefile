@@ -6,7 +6,7 @@
 #    By: jobailla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/23 19:27:01 by jobailla          #+#    #+#              #
-#*   Updated: 2017/08/18 01:33:44 by jobailla         ###   ########.fr       *#
+#*   Updated: 2017/11/06 18:16:39 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,6 +23,7 @@ INCLUDES 		:= -I$(INCS)
 # Search source files
 SRC_FILES		:=	/|\
 					ft_atoi.c|\
+					ft_atoi_base.c|\
 					ft_bzero.c|\
 					ft_count_word.c|\
 					ft_isalnum.c|\
