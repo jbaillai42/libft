@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/12 12:03:27 by jobailla          #+#    #+#             */
-/*   Updated: 2017/11/09 22:48:04 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/11/09 23:28:04 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,7 @@
 ** la fonction retourne NULL.
 */
 
-#include "../includes/libft.h"
-#include <stdio.h>
+#include "libft.h"
 
 char	**ft_strsplit(char const *s, char c)
 {
@@ -44,12 +43,5 @@ char	**ft_strsplit(char const *s, char c)
 			return (NULL);
 		s = s + len;
 	}
-	while (i--)
-		printf("%s\n", tab[i]);
 	return (tab);
-}
-
-int		main(void)
-{
-	ft_strsplit("               SALUT BONjour  HEyy Aurevoir       ", ' ');
 }
