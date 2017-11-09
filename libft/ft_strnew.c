@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/12 11:44:50 by jobailla          #+#    #+#             */
-/*   Updated: 2017/02/16 13:08:29 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/11/09 22:40:01 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strnew(size_t size)
 {
 	char	*str;
 
-	if (!(str = (char *)ft_memalloc(size + 1)))
+	if (size <= 0 || !(str = (char *)ft_memalloc(size + 1)))
 		return (NULL);
 	ft_bzero(str, size);
 	return (str);

@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/09 11:29:02 by jobailla          #+#    #+#             */
-/*   Updated: 2017/02/16 13:03:56 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/11/09 22:18:57 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,9 @@ char	*ft_strcpy(char *dst, const char *src)
 {
 	size_t i;
 
-	i = 0;
-	while (src[i])
-	{
+	i = -1;
+	while (src[++i])
 		dst[i] = src[i];
-		i++;
-	}
 	dst[i] = '\0';
 	return (dst);
 }

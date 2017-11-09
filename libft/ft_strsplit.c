@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/12 12:03:27 by jobailla          #+#    #+#             */
-/*   Updated: 2017/02/16 13:09:33 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/11/09 22:48:04 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,33 +17,39 @@
 ** la fonction retourne NULL.
 */
 
-#include "libft.h"
+#include "../includes/libft.h"
+#include <stdio.h>
 
 char	**ft_strsplit(char const *s, char c)
 {
 	char	**tab;
-	int		start;
-	int		end;
-	int		j;
-	int		i;
+	size_t	words;
+	size_t	len;
+	size_t	i;
 
-	j = 0;
 	i = 0;
+	words = (size_t)ft_count_word(s, c);
 	if (!(s))
 		return (NULL);
-	if (!(tab = (char **)ft_memalloc(sizeof(char *)
-	* (ft_count_word(s, c) + 1))))
+	if (!(tab = (char **)ft_memalloc(sizeof(char *) * (words + 1))))
 		return (NULL);
-	while (s[j] && i < ft_count_word(s, c))
+	while (*s && i < words)
 	{
-		end = 0;
-		while (s[j] == c)
-			j++;
-		start = j;
-		while (s[j++] != c)
-			end++;
-		if (!(tab[i++] = ft_strsub(s, start, end)))
+		len = 0;
+		while (*s == c)
+			s++;
+		while (*s && *(s + len) != c)
+			len++;
+		if (!(tab[i++] = ft_strsub(s, 0, len)))
 			return (NULL);
+		s = s + len;
 	}
+	while (i--)
+		printf("%s\n", tab[i]);
 	return (tab);
+}
+
+int		main(void)
+{
+	ft_strsplit("               SALUT BONjour  HEyy Aurevoir       ", ' ');
 }
