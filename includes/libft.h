@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 18:03:08 by jobailla          #+#    #+#             */
-/*   Updated: 2017/02/03 14:38:26 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/11/11 01:33:54 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ int					ft_ispunct(int c);
 int					ft_isspace(int c);
 int					ft_isupper(int c);
 int					ft_isxdigit(int c);
+int					ft_check_char(char const *str, char c, int i);
 int					ft_isblank_and_newline(int c);
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strequ(char const *s1, char const *s2);

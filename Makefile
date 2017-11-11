@@ -6,7 +6,7 @@
 #    By: jobailla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/23 19:27:01 by jobailla          #+#    #+#              #
-#*   Updated: 2017/11/06 18:16:39 by jobailla         ###   ########.fr       *#
+#*   Updated: 2017/11/11 01:42:42 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRC_FILES		:=	/|\
 					ft_isalpha.c|\
 					ft_isascii.c|\
 					ft_isblank.c|\
+					ft_check_char.c|\
 					ft_isblank_and_newline.c|\
 					ft_isdigit.c|\
 					ft_isgraph.c|\
@@ -97,7 +98,7 @@ SRC_FILES		:=	/|\
 C_FILES 		:= $(shell  find $(SRCS) -type f | egrep '$(SRC_FILES)')
 
 C_DIRS			:= $(shell find $(SRCS) -type d)/
-C_FLAGS			+= -Wall -Wextra -Werror -MMD -g -O2 -ggdb
+C_FLAGS			+= -Wall -Wextra -Werror -MMD -g -O2 -ggdb -fsanitize=address
 
 # Build .o list
 O_DIRS			:= $(addprefix $(OBJS)/,$(C_DIRS))
@@ -143,10 +144,10 @@ $(OBJS)/%.o: %.c
 	clang $(C_FLAGS) $(INCLUDES) -o $@ -c $< && $(eval COUNT+=1) $(PRINT_RED) $< || exit
 
 clean:
-	@rm -rf $(O_FILES) $(OBJS) 2> /dev/null
+	rm -rf $(O_FILES) $(OBJS) 2> /dev/null
 
 fclean: clean
-	@rm -f $(NAME) 2> /dev/null
+	rm -f $(NAME) 2> /dev/null
 
 re: fclean all
 
