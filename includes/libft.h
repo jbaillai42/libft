@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 18:03:08 by jobailla          #+#    #+#             */
-/*   Updated: 2017/11/11 19:10:30 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/11/15 22:09:32 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 
 typedef struct		s_list
 {
+	char			*str;
 	void			*content;
 	size_t			content_size;
 	struct s_list	*next;
@@ -84,6 +85,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_count_word(char const *s, int c);
 
 size_t				ft_strlen(const char *s);
+size_t				ft_lstlen(t_list *start);
 size_t				ft_nbrlen(int n);
 size_t				ft_nbrlen_base(int n, int base);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);

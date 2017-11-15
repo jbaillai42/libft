@@ -6,7 +6,7 @@
 #    By: jobailla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/23 19:27:01 by jobailla          #+#    #+#              #
-#*   Updated: 2017/11/11 19:11:14 by jobailla         ###   ########.fr       *#
+#*   Updated: 2017/11/15 21:57:29 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -79,6 +79,7 @@ SRC_FILES		:=	/|\
 					ft_strjoin.c|\
 					ft_strlcat.c|\
 					ft_strlen.c|\
+					ft_lstlen.c|\
 					ft_strmap.c|\
 					ft_strmapi.c|\
 					ft_strncat.c|\
