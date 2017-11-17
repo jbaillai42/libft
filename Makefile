@@ -132,8 +132,7 @@ BLUE			:= x1b[34m
 PURPLE			:= \x1b[35m
 
 PRINT_RED		= printf " [$(RED_G)%s$(NRM)$(RED_G)\t%3s%%$(RED_G)\t-->>\t$(YELLOW)%-65s\033[0m\r" "$(PYTHON)" "$(CALCUL)"
-PRINT_GREEN		= printf " [$(GREEN_G)%s$(NRM)$(GREEN_G)\t%3s%%\t-->>\t$(GREEN_G)%-65s\033[0m\r" "   LIBFT   " "100"
-
+PRINT_GREEN		= printf " [$(GREEN_G)%s$(NRM)$(GREEN_G)\t%3s%%\t$(GREEN_G)%-65s\033[0m\r" "   LIBFT   " "100"
 
 all:
 	make -j $(NAME)
