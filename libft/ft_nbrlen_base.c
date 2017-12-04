@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 19:06:42 by jobailla          #+#    #+#             */
-/*   Updated: 2017/11/11 19:08:51 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/04 17:42:48 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t		ft_nbrlen_base(int n, int base)
 {
-	int i;
+	size_t		i;
 
 	i = 1;
 	while (n /= base)

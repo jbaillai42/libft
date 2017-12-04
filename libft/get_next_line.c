@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/20 00:22:31 by jobailla          #+#    #+#             */
-/*   Updated: 2017/01/09 09:09:09 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/04 18:53:47 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,11 +101,11 @@ static int		look_for_read(t_gnl *item, char **line)
 	return (0);
 }
 
-static int		read_fd(t_gnl *item, char **line)
+static int	read_fd(t_gnl *item, char **line)
 {
 	int		ret;
 
-	while ((ret = read(item->fd, item->buf, BUFF_SIZE)) != 0)
+	while ((ret = (int)read(item->fd, item->buf, BUFF_SIZE)) != 0)
 	{
 		if (ret == -1)
 			return (-1);
@@ -128,6 +128,6 @@ int				get_next_line(const int fd, char **line)
 		return (-1);
 	ret = look_buf(tmp, line);
 	if (!ret)
-		ret = read_fd(tmp, line);
+		ret = (int)read_fd(tmp, line);
 	return (ret);
 }

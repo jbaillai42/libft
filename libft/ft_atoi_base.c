@@ -6,13 +6,13 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 13:30:51 by jobailla          #+#    #+#             */
-/*   Updated: 2017/11/06 18:43:30 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/04 19:32:33 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		is_base(char c, int base)
+static	int		is_base(char c, int base)
 {
 	char	base_min[17] = "0123456789abcdef";
 	char	base_maj[17] = "0123456789ABCDEF";
@@ -23,7 +23,7 @@ int		is_base(char c, int base)
 	return (0);
 }
 
-int		value(char c)
+static	int		value(char c)
 {
 	if (c >= '0' && c <= '9')
 		return (c - '0');

@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 11:28:27 by jobailla          #+#    #+#             */
-/*   Updated: 2017/02/16 13:03:37 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/04 18:47:04 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+char	*ft_strchr(char *s, int c)
 {
 	while (*s && *s != (char)c)
 		s++;

@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/12 12:06:33 by jobailla          #+#    #+#             */
-/*   Updated: 2016/11/19 11:46:15 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/04 18:48:11 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@
 
 void	ft_putendl(char const *s)
 {
-	ft_putstr((char *)s);
+	ft_putstr((const char *)s);
 	write(1, "\n", 1);
 }

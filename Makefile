@@ -6,7 +6,7 @@
 #    By: jobailla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/23 19:27:01 by jobailla          #+#    #+#              #
-#*   Updated: 2017/11/15 21:57:29 by jobailla         ###   ########.fr       *#
+#*   Updated: 2017/12/04 19:29:23 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,7 @@ SRC_FILES		:=	/|\
 					ft_memchr.c|\
 					ft_memcmp.c|\
 					ft_memcpy.c|\
+					ft_swap.c|\
 					ft_memdel.c|\
 					ft_memmove.c|\
 					ft_memset.c|\
@@ -68,6 +69,7 @@ SRC_FILES		:=	/|\
 					ft_putstr_fd.c|\
 					ft_strcat.c|\
 					ft_strchr.c|\
+					ft_strrev.c|\
 					ft_strclr.c|\
 					ft_strcmp.c|\
 					ft_strcpy.c|\
@@ -101,7 +103,8 @@ SRC_FILES		:=	/|\
 C_FILES 		:= $(shell  find $(SRCS) -type f | egrep '$(SRC_FILES)')
 
 C_DIRS			:= $(shell find $(SRCS) -type d)/
-C_FLAGS			+= -Wall -Wextra -Werror -MMD -g -O2 -ggdb #-fsanitize=address
+C_FLAGS			+= -Wall -Wextra -Werror -MMD -g -O2 -ggdb -fsanitize=address \
+					-Weverything
 
 # Build .o list
 O_DIRS			:= $(addprefix $(OBJS)/,$(C_DIRS))

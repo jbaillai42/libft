@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 11:19:35 by jobailla          #+#    #+#             */
-/*   Updated: 2017/02/16 13:00:55 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/04 18:55:42 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,17 +18,17 @@
 
 #include "libft.h"
 
-void	*ft_memchr(const void *src, int c, size_t n)
+const	void	*ft_memchr(const void *src, int c, size_t n)
 {
-	unsigned char	*s;
-	unsigned char	ch;
+	const unsigned char	*s;
+	unsigned char		ch;
 
-	s = (unsigned char *)src;
+	s = (const unsigned char *)src;
 	ch = (unsigned char)c;
 	while (n--)
 	{
 		if (*s == ch)
-			return ((void *)s);
+			return ((const void *)s);
 		s++;
 	}
 	return (NULL);

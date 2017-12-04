@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/12 12:00:55 by jobailla          #+#    #+#             */
-/*   Updated: 2017/02/16 13:04:45 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/04 18:11:38 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	char	*str;
-	int		len;
+	char		*str;
+	size_t		len;
 
 	if (s1 && s2)
 	{

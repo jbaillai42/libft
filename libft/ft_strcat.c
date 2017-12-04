@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/16 10:32:16 by jobailla          #+#    #+#             */
-/*   Updated: 2017/02/16 13:06:52 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/04 18:52:26 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 
 char	*ft_strcat(char *s1, const char *s2)
 {
-	int		i;
-	int		len;
+	size_t		i;
+	size_t		len;
 
 	i = 0;
 	len = ft_strlen(s1);

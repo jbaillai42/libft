@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/12 12:53:16 by jobailla          #+#    #+#             */
-/*   Updated: 2017/02/16 13:02:54 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/04 18:21:41 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 
 #include "libft.h"
 
-size_t	ft_nbrlen(int n)
+size_t	ft_nbrlen(intmax_t n)
 {
-	int i;
+	size_t	i;
 
 	i = 1;
 	while (n /= 10)

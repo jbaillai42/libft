@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/12 11:55:24 by jobailla          #+#    #+#             */
-/*   Updated: 2017/02/16 13:05:34 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/04 18:57:11 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	*str;
-	int		i;
+	char			*str;
+	unsigned int	i;
 
 	i = 0;
 	if (!s || !f)

@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 18:29:24 by jobailla          #+#    #+#             */
-/*   Updated: 2017/11/11 22:21:08 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/04 18:09:25 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_itoa_base(int n, int base)
 {
 	char		*ret;
 	size_t		len;
-	long		nb;
+	intmax_t	nb;
 
 	if (base < 2)
 		return (0);
@@ -31,7 +31,7 @@ char	*ft_itoa_base(int n, int base)
 		return (NULL);
 	while (len--)
 	{
-		ret[len] = (nb % base < 10) ? nb % base + '0' : nb % base + 'A' - 10;
+		ret[len] = (nb % base < 10) ? (char)nb % base + '0' : (char)nb % base + 'A' - 10;
 		nb /= base;
 	}
 	n < 0 ? ret[0] = '-' : 0;

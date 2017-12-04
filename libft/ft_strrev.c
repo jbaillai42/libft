@@ -1,23 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_strrev.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/10/12 12:07:18 by jobailla          #+#    #+#             */
-/*   Updated: 2017/12/04 18:52:43 by jobailla         ###   ########.fr       */
+/*   Created: 2017/12/04 17:25:23 by jobailla          #+#    #+#             */
+/*   Updated: 2017/12/04 19:57:48 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
-** Ecrit la chaine s sur le descripteur de fichier fd suivi d’un ’\n’.
-*/
-
 #include "libft.h"
+#include <string.h>
 
-void	ft_putendl_fd(char const *s, int fd)
+char	*ft_strrev(char *str)
 {
-	ft_putstr_fd((const char *)s, fd);
-	ft_putchar_fd('\n', fd);
+	size_t		len;
+	size_t		i;
+	char		c;
+
+	i = 0;
+	len = ft_strlen(str) - 1;
+	while (i != len / 2)
+	{
+		c = str[i];
+		str[i] = str[len - i];
+		str[len - i] = c;
+		i++;
+	}
+	return (str);
 }

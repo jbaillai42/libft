@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/08 18:06:40 by jobailla          #+#    #+#             */
-/*   Updated: 2017/01/25 05:27:11 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/04 18:08:48 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,9 @@
 
 #include "libft.h"
 
-void	ft_putnbr(int nb)
+void	ft_putnbr(intmax_t n)
 {
-	long int n;
 
-	n = (long int)nb;
 	if (n < 0)
 	{
 		ft_putchar('-');
@@ -32,5 +30,5 @@ void	ft_putnbr(int nb)
 		ft_putnbr(n % 10);
 	}
 	else
-		ft_putchar(n + '0');
+		ft_putchar((char)n + '0');
 }

@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/20 00:08:52 by jobailla          #+#    #+#             */
-/*   Updated: 2017/02/15 14:22:21 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/04 18:40:10 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,13 @@
 # define GET_NEXT_LINE_H
 # include "libft.h"
 
-# define BUFF_SIZE 1
+# define BUFF_SIZE 1024
 
 typedef struct		s_gnl
 {
 	int				fd;
 	char			buf[BUFF_SIZE + 1];
+	char			pad[3];
 	struct s_gnl	*next;
 }					t_gnl;
 

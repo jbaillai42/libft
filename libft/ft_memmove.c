@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 18:33:43 by jobailla          #+#    #+#             */
-/*   Updated: 2017/02/16 13:02:31 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/04 18:59:51 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	char	*d;
-	char	*s;
+	char		*d;
+	const char	*s;
 
-	s = (char *)src;
+	s = (const char *)src;
 	d = (char *)dst;
 	if (dst < src)
 		ft_memcpy(d, s, n);

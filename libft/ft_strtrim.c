@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/12 12:02:09 by jobailla          #+#    #+#             */
-/*   Updated: 2017/02/16 13:10:11 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/04 18:59:19 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
 
 char	*ft_strtrim(char const *s)
 {
-	size_t		start;
-	size_t		end;
+	unsigned int	start;
+	size_t			end;
 
 	if (!s)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/09 21:58:20 by jobailla          #+#    #+#             */
-/*   Updated: 2017/02/16 13:09:20 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/04 18:20:54 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 #include "libft.h"
 
-char	*ft_strstr(const char *big, const char *little)
+char	*ft_strstr(char *big, char *little)
 {
 	size_t i;
 	size_t j;
