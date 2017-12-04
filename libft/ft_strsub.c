@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/12 11:59:18 by jobailla          #+#    #+#             */
-/*   Updated: 2017/12/04 19:10:56 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/04 20:01:42 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t n)
 	int		i;
 
 	i = 0;
-if (!(str = (char *)ft_memalloc(sizeof(*str) * n + 1)))
+	if (!(str = (char *)ft_memalloc(sizeof(*str) * n + 1)))
 		return (NULL);
 	if (s)
 	{
