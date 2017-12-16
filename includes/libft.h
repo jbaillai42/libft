@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 18:03:08 by jobailla          #+#    #+#             */
-/*   Updated: 2017/12/04 19:33:32 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/16 23:00:02 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putendl(char const *s);
 void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr(intmax_t n);
+void				ft_putnbr_base(intmax_t n, int base);
 void				ft_putnbr_fd(intmax_t nb, int fd);
 void				ft_putstr(const char *str);
 void				ft_putstr_fd(char const *s, int fd);
@@ -87,6 +88,7 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_count_word(char const *s, int c);
 
 size_t				ft_strlen(const char *s);
+size_t				ft_binlen(intmax_t bin);
 size_t				ft_lstlen(t_list *start);
 size_t				ft_nbrlen(intmax_t n);
 size_t				ft_nbrlen_base(int n, int base);

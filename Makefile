@@ -6,7 +6,7 @@
 #    By: jobailla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/23 19:27:01 by jobailla          #+#    #+#              #
-#*   Updated: 2017/12/04 19:29:23 by jobailla         ###   ########.fr       *#
+#*   Updated: 2017/12/16 23:00:22 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,12 +58,14 @@ SRC_FILES		:=	/|\
 					ft_memmove.c|\
 					ft_memset.c|\
 					ft_nbrlen.c|\
+					ft_binlen.c|\
 					ft_nbrlen_base.c|\
 					ft_putchar.c|\
 					ft_putchar_fd.c|\
 					ft_putendl.c|\
 					ft_putendl_fd.c|\
 					ft_putnbr.c|\
+					ft_putnbr_base.c|\
 					ft_putnbr_fd.c|\
 					ft_putstr.c|\
 					ft_putstr_fd.c|\
