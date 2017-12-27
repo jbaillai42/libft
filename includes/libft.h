@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 18:03:08 by jobailla          #+#    #+#             */
-/*   Updated: 2017/12/16 23:00:02 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/27 17:22:03 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,8 @@ size_t				ft_strlcat(char *dst, const char *src, size_t size);
 
 char				**ft_strsplit(char const *s, char c);
 char				*ft_itoa(int n);
+char				*ft_htoa(unsigned long n);
+char				*ft_htoa_max(unsigned long n, size_t max);
 char				*ft_itoa_base(int nb, int base);
 char				*ft_strcat(char *s1, const char *s2);
 char				*ft_strchr(char *s, int c);

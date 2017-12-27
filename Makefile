@@ -6,7 +6,7 @@
 #    By: jobailla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/23 19:27:01 by jobailla          #+#    #+#              #
-#*   Updated: 2017/12/16 23:00:22 by jobailla         ###   ########.fr       *#
+#*   Updated: 2017/12/27 17:19:02 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ SRC_FILES		:=	/|\
 					ft_isupper.c|\
 					ft_isxdigit.c|\
 					ft_itoa.c|\
+					ft_htoa.c|\
 					ft_itoa_base.c|\
 					ft_lstadd.c|\
 					ft_lstdel.c|\
