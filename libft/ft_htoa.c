@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/27 16:06:26 by jobailla          #+#    #+#             */
-/*   Updated: 2017/12/27 17:22:56 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/27 17:51:29 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ char			*ft_htoa_max(unsigned long n, size_t max)
 	while (len--)
 	{
 		x = n % 16;
-		ret[len] = value(x);
+		ret[len] = value((int)x);
 		n = n / 16;
 		len--;
 	}
