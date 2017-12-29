@@ -6,51 +6,40 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/12/27 16:06:26 by jobailla          #+#    #+#             */
-/*   Updated: 2017/12/27 17:51:29 by jobailla         ###   ########.fr       */
+/*   Updated: 2017/12/29 22:59:28 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int		value(int x)
-{
-	if (0 <= x && x <= 9)
-		return ('0' + x);
-	else if (10 <= x && x <= 15)
-	{
-		x = x - 10;
-		return ('a' + x);
-	}
-	return (0);
-}
-
 char			*ft_htoa(unsigned long n)
 {
+	static char		charset[17] = "0123456789abcdef";
 	char			*ret;
 	size_t			len;
 	unsigned long	x;
 
 	x = n;
-	len = 0;
-	while (x > 16)
+	len = 2;
+	while (x)
 	{
 		x = x / 16;
 		len++;
 	}
 	if (!(ret = ft_strnew(len)))
 		return (NULL);
-	while (len--)
+	*(short*)ret = ('x' << 8) | '0';
+	while (len > 2)
 	{
-		x = n % 16;
-		ret[len] = value(x);
+		ret[--len] = charset[n % 16];
 		n = n / 16;
-		len--;
 	}
 	return (ret);
 }
 
 char			*ft_htoa_max(unsigned long n, size_t max)
 {
+	static char		charset[17] = "0123456789abcdef";
 	char			*p;
 	char			ret[max];
 	size_t			len;
@@ -58,19 +47,18 @@ char			*ft_htoa_max(unsigned long n, size_t max)
 
 	x = n;
 	p = ret;
-	len = 0;
+	len = 2;
 	ft_memset(ret, '\0', max);
-	while (x > 16)
+	while (x)
 	{
 		x = x / 16;
 		len++;
 	}
-	while (len--)
+	*(short*)ret = ('x' << 8) | '0';
+	while (len > 2)
 	{
-		x = n % 16;
-		ret[len] = value((int)x);
+		ret[--len] = charset[n % 16];
 		n = n / 16;
-		len--;
 	}
 	return (p);
 }
