@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 19:06:42 by jobailla          #+#    #+#             */
-/*   Updated: 2018/01/17 06:45:10 by jobailla         ###   ########.fr       */
+/*   Updated: 2018/01/17 06:48:22 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ int8_t		ft_nbrlen_base(uintmax_t n, int8_t base)
 		n = n / base;
 		++ret;
 	}
-	return (ret / 2);
+	return (ret);
 }
