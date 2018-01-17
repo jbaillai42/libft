@@ -106,7 +106,7 @@ SRC_FILES		:=	/|\
 C_FILES 		:= $(shell  find $(SRCS) -type f | egrep '$(SRC_FILES)')
 
 C_DIRS			:= $(shell find $(SRCS) -type d)/
-C_FLAGS			+= -Wall -Wextra -Werror -MMD -g -O2 -ggdb -fsanitize=address \
+C_FLAGS			+= #-Wall -Wextra -Werror -MMD -g -O2 -ggdb -fsanitize=address \
 					-Weverything
 
 # Build .o list

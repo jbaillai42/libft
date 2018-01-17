@@ -1,28 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_nbrlen_base.c                                   :+:      :+:    :+:   */
+/*   tmp.c                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
+/*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/11 19:06:42 by jobailla          #+#    #+#             */
-/*   Updated: 2018/01/17 06:45:10 by jobailla         ###   ########.fr       */
+/*   Created: 2018/01/15 05:40:26 by jobailla          #+#    #+#             */
+/*   Updated: 2018/01/15 05:42:38 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int8_t		ft_nbrlen_base(uintmax_t n, int8_t base)
+int		main(void)
 {
-	int8_t	ret;
-
-	ret = 0;
-	if (n == 0)
-		return (1);
-	while (n)
-	{
-		n = n / base;
-		++ret;
-	}
-	return (ret / 2);
+	ft_putstr("Ѿ\n");
 }

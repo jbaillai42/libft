@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 18:03:08 by jobailla          #+#    #+#             */
-/*   Updated: 2017/12/27 17:22:03 by jobailla         ###   ########.fr       */
+/*   Updated: 2018/01/17 06:42:34 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ size_t				ft_strlen(const char *s);
 size_t				ft_binlen(intmax_t bin);
 size_t				ft_lstlen(t_list *start);
 size_t				ft_nbrlen(intmax_t n);
-size_t				ft_nbrlen_base(int n, int base);
+int8_t				ft_nbrlen_base(uintmax_t n, int8_t base);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 
 char				**ft_strsplit(char const *s, char c);
