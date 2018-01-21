@@ -149,7 +149,7 @@ $(NAME): $(O_FILES)
 	ranlib $(NAME)
 
 $(OBJS)/%.o: %.c
-	clang $(C_FLAGS) $(INCLUDES) -o $@ -c $< && $(eval COUNT+=1) $(PRINT_RED) $< || exit
+	gcc $(C_FLAGS) $(INCLUDES) -o $@ -c $< && $(eval COUNT+=1) $(PRINT_RED) $< || exit
 
 clean:
 	rm -rf $(O_FILES) $(OBJS) 2> /dev/null
