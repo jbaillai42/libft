@@ -1,18 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
+/*   print_hex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/12/11 13:30:12 by jobailla          #+#    #+#             */
-/*   Updated: 2018/03/26 15:30:21 by jobailla         ###   ########.fr       */
+/*   Created: 2018/03/26 15:07:03 by jobailla          #+#    #+#             */
+/*   Updated: 2018/03/26 15:31:52 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr_base(intmax_t nb, int base)
+void	ft_print_base(intmax_t n, int base)
 {
-	ft_putnbr(ft_atoi_base(ft_itoa((int)nb), base));
+	if (n >= base)
+		ft_print_base(n / base, base);
+	n %= base;
+	n += n < 10 ? '0' : 'a' - 10;
+	write(1, &n, 1);
 }

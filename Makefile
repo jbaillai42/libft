@@ -6,7 +6,7 @@
 #    By: jobailla <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/12/23 19:27:01 by jobailla          #+#    #+#              #
-#*   Updated: 2017/12/27 17:19:02 by jobailla         ###   ########.fr       *#
+#*   Updated: 2018/03/26 15:32:18 by jobailla         ###   ########.fr       *#
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,7 @@ SRC_FILES		:=	/|\
 					ft_putendl_fd.c|\
 					ft_putnbr.c|\
 					ft_putnbr_base.c|\
+					ft_print_base.c|\
 					ft_putnbr_fd.c|\
 					ft_putstr.c|\
 					ft_putstr_fd.c|\

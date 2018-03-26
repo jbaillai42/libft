@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/08/18 18:03:08 by jobailla          #+#    #+#             */
-/*   Updated: 2018/01/17 06:42:34 by jobailla         ###   ########.fr       */
+/*   Updated: 2018/03/26 15:31:30 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,7 @@ void				ft_putendl_fd(char const *s, int fd);
 void				ft_putnbr(intmax_t n);
 void				ft_putnbr_base(intmax_t n, int base);
 void				ft_putnbr_fd(intmax_t nb, int fd);
+void				ft_print_base(intmax_t n, int base);
 void				ft_putstr(const char *str);
 void				ft_putstr_fd(char const *s, int fd);
 void				ft_strclr(char *s);
