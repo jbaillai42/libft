@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/10/12 12:03:27 by jobailla          #+#    #+#             */
-/*   Updated: 2017/11/09 23:28:04 by jobailla         ###   ########.fr       */
+/*   Updated: 2018/07/04 17:15:04 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,6 @@ char	**ft_strsplit(char const *s, char c)
 			return (NULL);
 		s = s + len;
 	}
+	tab[i] = NULL;
 	return (tab);
 }
