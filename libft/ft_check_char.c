@@ -6,13 +6,13 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/11 00:51:19 by jobailla          #+#    #+#             */
-/*   Updated: 2017/11/11 01:44:43 by jobailla         ###   ########.fr       */
+/*   Updated: 2018/11/11 21:35:11 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
- * La fonction renvoie (1) si c est contenu dans str entre str[0] - str[i]
- */
+** La fonction renvoie (1) si c est contenu dans str entre str[0] - str[i]
+*/
 
 #include "libft.h"
 

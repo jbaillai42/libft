@@ -6,7 +6,7 @@
 /*   By: jobailla <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/12/20 00:22:31 by jobailla          #+#    #+#             */
-/*   Updated: 2017/12/04 18:53:47 by jobailla         ###   ########.fr       */
+/*   Updated: 2018/11/11 21:36:31 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,7 +101,7 @@ static int		look_for_read(t_gnl *item, char **line)
 	return (0);
 }
 
-static int	read_fd(t_gnl *item, char **line)
+static int		read_fd(t_gnl *item, char **line)
 {
 	int		ret;
 

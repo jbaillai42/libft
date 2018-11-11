@@ -6,7 +6,7 @@
 /*   By: jobailla <jobailla@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/06 13:30:51 by jobailla          #+#    #+#             */
-/*   Updated: 2017/12/04 19:32:33 by jobailla         ###   ########.fr       */
+/*   Updated: 2018/11/11 21:34:52 by jobailla         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,15 @@
 
 static	int		is_base(char c, int base)
 {
-	char	base_min[17] = "0123456789abcdef";
-	char	base_maj[17] = "0123456789ABCDEF";
+	char	*base_min;
+	char	*base_maj;
 
+	if (!(base_min = (char *)malloc(sizeof(char *) * 17)))
+		return (0);
+	if (!(base_maj = (char *)malloc(sizeof(char *) * 17)))
+		return (0);
+	base_min = "0123456789abcdef";
+	base_maj = "0123456789ABCDEF";
 	while (base--)
 		if (base_min[base] == c || base_maj[base] == c)
 			return (1);
@@ -34,7 +40,7 @@ static	int		value(char c)
 	return (0);
 }
 
-int		ft_atoi_base(const char *str, int base)
+int				ft_atoi_base(const char *str, int base)
 {
 	int		r;
 	int		sign;
